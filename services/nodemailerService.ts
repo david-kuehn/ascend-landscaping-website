@@ -33,6 +33,7 @@ export async function sendMail(details: EmailDetails) {
 
   transporter.sendMail(mailOptions, function (error: any, info: any) {
     if (error) {
+      console.error(error);
       throw new Error(error);
     } else {
       console.log("Email Sent: ", info);
