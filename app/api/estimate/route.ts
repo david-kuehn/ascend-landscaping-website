@@ -24,5 +24,6 @@ export async function POST(request: Request) {
     contents: `A new Quote Request was received from ${requestBodyJson.customerName}, reachable at ${requestBodyJson.customerEmail}.`
   }
   await sendMail(messageDetails);
+  console.log("Should have sent message...");
   return NextResponse.json({ "testResponse": "Hello World!" });
 }
