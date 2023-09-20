@@ -5,6 +5,7 @@ import Carousel from "./components/Carousel";
 import FullHeightContainer from "./components/FullHeightContainer";
 import Navbar from "./components/Navbar";
 import CallNowButton from "./components/CallNowButton";
+import QuoteForm from "./components/QuoteForm";
 
 export default function Home() {
   return (
@@ -60,6 +61,11 @@ export default function Home() {
         <div className="w-10/12 sm:w-4/5 lg:w-3/5 xl:w-1/2 h-[18rem] sm:h-[23rem] md:h-[30rem]">
           <Carousel />
         </div>
+      </div>
+
+      { /* Quote Form */ }
+      <div className="w-full flex flex-col items-center justify-center">
+        <QuoteForm />
       </div>
 
       <div className="w-full my-10">
