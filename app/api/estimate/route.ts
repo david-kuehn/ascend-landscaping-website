@@ -1,16 +1,6 @@
 var nodemailer = require("nodemailer");
+import { EstimateDetails, buildEmailBody } from "@/services/nodemailerService";
 import { NextResponse } from "next/server";
-
-export interface EstimateRequest extends Request {
-  estimateDetails: EstimateDetails
-}
-
-export interface EstimateDetails {
-  customerName: string;
-  customerEmail: string;
-  customerPhone: string;
-  interestedServices: { landscaping: string[], hardscaping: string[], lighting: string[], other: string }
-}
 
 export async function POST(request: Request) {
   const requestBodyJson: EstimateDetails = await request.json();
@@ -43,8 +33,8 @@ export async function POST(request: Request) {
     },
     to: "dmkuehn6@gmail.com",
     replyTo: requestBodyJson.customerEmail,
-    subject: `New Quote Request from ${requestBodyJson.customerName}`,
-    text: `A new Quote Request was received from ${requestBodyJson.customerName}, reachable at ${requestBodyJson.customerEmail}.`,
+    subject: `New Estimate Request from ${requestBodyJson.customerName}`,
+    html: buildEmailBody(requestBodyJson),
   };
 
   await new Promise((resolve, reject) => {
