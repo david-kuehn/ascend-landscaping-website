@@ -7,17 +7,30 @@ export interface EstimateDetails {
   interestedServices: { landscaping: string[], hardscaping: string[], lighting: string[], other: string }
 }
 
+const serviceKeyToPrettyStringMap = {
+  lawncare: "Lawncare",
+  mulching: "Mulching",
+  snowRemoval: "Snow Removal",
+  plantTreeCare: "Plant/Tree Care",
+  other: "Other Services (customer did not specify)",
+  patio: "Patio",
+  walkway: "Walkway",
+  retainingWall: "Retaining Wall",
+  accentLights: "Accent Lighting",
+  floodLights: "Flood Lights",
+}
+
 export function buildEmailBody(customerRequestDetails: EstimateDetails) {
   const landscapingServicesHtmlList = customerRequestDetails.interestedServices.landscaping.map((service: string) => {
-    return `<li>${service}</li>`;
+    return `<li>${serviceKeyToPrettyStringMap[service as keyof typeof serviceKeyToPrettyStringMap]}</li>`;
   }).join('\n');
 
   const hardscapingServicesHtmlList = customerRequestDetails.interestedServices.hardscaping.map((service: string) => {
-    return `<li>${service}</li>`;
+    return `<li>${serviceKeyToPrettyStringMap[service as keyof typeof serviceKeyToPrettyStringMap]}</li>`;
   }).join('\n');
 
   const lightingServicesHtmlList = customerRequestDetails.interestedServices.lighting.map((service: string) => {
-    return `<li>${service}</li>`;
+    return `<li>${serviceKeyToPrettyStringMap[service as keyof typeof serviceKeyToPrettyStringMap]}</li>`;
   }).join('\n');
 
   return `
