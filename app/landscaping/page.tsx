@@ -52,9 +52,9 @@ export default function Landscaping() {
             />
 
             <div className="grid grid-cols-2 grid-rows-2 gap-4 font-serif text-2xl sm:text-3xl text-center sm:text-left my-8 sm:my-10">
-              <span>🌳 Landscaping</span>
-              <span>🧱 Hardscaping</span>
-              <span>💡 Lighting</span>
+              <span><a href="/landscaping">🌳 Landscaping</a></span>
+              <span><a href="/hardscaping">🧱 Hardscaping</a></span>
+              <span><a href="/lighting">💡 Lighting</a></span>
               <span>💧 Water Features</span>
             </div>
 

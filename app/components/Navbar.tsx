@@ -26,9 +26,9 @@ export default function Navbar(props: { currentPage: number }) {
       </div>
 
       <div className="w-full flex items-center justify-center gap-10 pt-4 text-lg underline-offset-2 text-center">
-        <div className={`${props.currentPage == 2 ? "underline" : ""} w-48 hover:scale-105 transition-all`}><a href="/hardscaping">Hardscaping</a></div>
-        <div className={`${props.currentPage == 1 ? "underline" : ""} w-48 hover:scale-105 transition-all`}><a href="/landscaping">Landscaping Services</a></div>
-        <div className={`${props.currentPage == 3 ? "underline" : ""} w-48 hover:scale-105 transition-all`}><a href="/lighting">Lighting</a></div>
+        <div className={`${props.currentPage == 2 ? "font-semibold" : ""} w-48 hover:scale-105 transition-all underline`}><a href="/hardscaping">Hardscaping</a></div>
+        <div className={`${props.currentPage == 1 ? "font-semibold" : ""} w-48 hover:scale-105 transition-all underline leading-none`}><a href="/landscaping">Landscaping Services</a></div>
+        <div className={`${props.currentPage == 3 ? "font-semibold" : ""} w-48 hover:scale-105 transition-all underline`}><a href="/lighting">Lighting</a></div>
       </div>
     </nav>
   )
