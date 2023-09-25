@@ -1,39 +1,31 @@
 import Image, { StaticImageData } from "next/image";
 import FullHeightContainer from "../components/FullHeightContainer";
 import Navbar from "../components/Navbar";
-import landscapingHeroImage from "../../public/carousel-images/homepage/carousel-00007.png";
+import lightingHeroImage from "../../public/carousel-images/homepage/carousel-00019.jpeg";
 import ascendLogo from "../../public/ascend-logo.png";
 import treesHillsGraphic from "../../public/trees-hills-graphic.png";
 import CallNowButton from "../components/CallNowButton";
 import Carousel from "../components/Carousel";
 import QuoteForm from "../components/QuoteForm";
 
-import carouselImage5 from "../../public/carousel-images/homepage/carousel-00005.png";
-import carouselImage6 from "../../public/carousel-images/homepage/carousel-00006.png";
-import carouselImage7 from "../../public/carousel-images/homepage/carousel-00007.png";
-import carouselImage8 from "../../public/carousel-images/homepage/carousel-00008.png";
-import carouselImage9 from "../../public/carousel-images/homepage/carousel-00009.png";
-import carouselImage10 from "../../public/carousel-images/homepage/carousel-00010.png";
-import carouselImage11 from "../../public/carousel-images/homepage/carousel-00011.png";
-import carouselImage12 from "../../public/carousel-images/homepage/carousel-00012.png";
-import carouselImage13 from "../../public/carousel-images/homepage/carousel-00013.png";
-import carouselImage14 from "../../public/carousel-images/homepage/carousel-00014.png";
-import carouselImage15 from "../../public/carousel-images/homepage/carousel-00015.png";
-import carouselImage16 from "../../public/carousel-images/homepage/carousel-00016.png";
+import carouselImage17 from "../../public/carousel-images/homepage/carousel-00017.png";
+import carouselImage19 from "../../public/carousel-images/homepage/carousel-00019.jpeg";
+import carouselImage20 from "../../public/carousel-images/homepage/carousel-00020.jpeg";
+import carouselImage21 from "../../public/carousel-images/homepage/carousel-00021.jpeg";
+import carouselImage22 from "../../public/carousel-images/homepage/carousel-00022.jpeg";
 
-const landscapingPageCarouselImages: StaticImageData[] = [carouselImage5, carouselImage6, carouselImage7, carouselImage8, 
-  carouselImage9, carouselImage10, carouselImage11, carouselImage12, carouselImage13, carouselImage14, carouselImage15, carouselImage16]
+const lightingPageCarouselImages: StaticImageData[] = [carouselImage17, carouselImage19, carouselImage20, carouselImage21, carouselImage22];
 
-export default function Landscaping() {
-  return(
+export default function Lighting() {
+  return (
     <main>
       <FullHeightContainer>
-        <Navbar currentPage={1} />
+        <Navbar currentPage={3} />
 
         <div
           className="flex-1 flex"
           style={{
-            backgroundImage: `url(${landscapingHeroImage.src})`,
+            backgroundImage: `url(${lightingHeroImage.src})`,
             backgroundSize: "cover",
           }}
         >
@@ -62,8 +54,8 @@ export default function Landscaping() {
           </div>
         </div>
 
-        <div className="text-black font-serif w-full text-center flex flex-col items-center justify-center py-6">
-          <span className="w-full text-3xl font-bold">Landscaping Services</span>
+        <div className="text-black font-serif w-full text-center flex flex-col items-center justify-center pt-6">
+          <span className="w-full text-3xl font-bold">Lighting</span>
           <span className="w-full text-xl">by Ascend</span>
 
           <div className="lg:absolute right-10 mt-5 lg:mt-0">
@@ -74,21 +66,20 @@ export default function Landscaping() {
 
       <div className="py-8 text-xl text-black font-serif text-center w-full flex flex-col items-center justify-center">
         <p className="w-3/5">
-        At Ascend, we are committed to providing custom landscaping services that are perfectly tailored to each client&apos;s needs. We&apos;ll help you get your outdoor spaces looking their best &mdash; quickly, professionally, and at a fair price!
+        There&apos;s no better way to accentuate your beautiful outdoor space than by making it shine with accent lighting. Take your barbecues to the next level with tasteful lights around your grilling area and outdoor dining space, or light up the night in your whole yard with flood lights. At Ascend, we&apos;ll bring our professional design experience and reliable, courteous employees to make your yard the star of the neighboorhood!
         </p>
 
         <div className="my-10 w-10/12 sm:w-4/5 lg:w-3/5 xl:w-1/2 h-[18rem] sm:h-[23rem] md:h-[30rem]">
-          <h3 className="font-bold text-3xl text-center w-full mb-3">Our Landscaping Work</h3>
-          <Carousel carouselImages={landscapingPageCarouselImages} />
+          <h3 className="font-bold text-3xl text-center w-full mb-3">Our Lighting Work</h3>
+          <Carousel carouselImages={lightingPageCarouselImages} />
         </div>
 
         <div className="mt-10 mx-10">
-          <p className="font-semibold text-left mb-2">Services that we provide include:</p>
+          <p className="font-semibold text-left mb-2">Lighting services that we provide include:</p>
           <ul className="list-disc text-left text-base lg:text-lg">
-            <li>Lawn Care 🏞</li>
-            <li>Mulching 🟤</li>
-            <li>Flower/Plant Installation & Maintenance 🌷</li>
-            <li>Tree Care & Installation/Removal 🌳</li>
+            <li>Accent Lighting Design & Installation ✨</li>
+            <li>Floodlights 🔆</li>
+            <li>String Lighting 💡</li>
           </ul>
         </div>
       </div>

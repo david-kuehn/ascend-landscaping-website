@@ -4,6 +4,7 @@ import { NextResponse } from "next/server";
 
 export async function POST(request: Request) {
   const requestBodyJson: EstimateDetails = await request.json();
+  console.log("Request Body was as follows: ", requestBodyJson);
 
   var transporter = nodemailer.createTransport({
     service: "gmail",

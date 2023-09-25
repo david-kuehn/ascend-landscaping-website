@@ -70,7 +70,7 @@ export default function QuoteForm() {
 
     let selectedLightingKeys: string[] = [];
     Object.keys(lightingServices).forEach((key, idx) => {
-      if (hardscapingServices[key as keyof typeof hardscapingServices] == true) {
+      if (lightingServices[key as keyof typeof lightingServices] == true) {
         selectedLightingKeys.push(key);
       }
     });
@@ -100,7 +100,7 @@ export default function QuoteForm() {
   };
 
   return (
-    <div className="text-black font-serif bg-gray-300 w-3/4 lg:w-1/2 px-8 md:px-16 lg:px-20 xl:px-24 py-5 rounded-md">
+    <div className="text-black font-serif bg-gray-300 w-5/6 lg:w-1/2 px-8 md:px-16 lg:px-20 xl:px-24 py-5 rounded-md">
       <form onSubmit={handleSubmit}>
         <h1 className="text-4xl text-center font-semibold mb-2">Get a Free Estimate!</h1>
 
