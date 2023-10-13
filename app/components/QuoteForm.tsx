@@ -102,7 +102,7 @@ export default function QuoteForm() {
   return (
     <div className="text-black font-serif bg-gray-300 w-5/6 lg:w-1/2 px-8 md:px-16 lg:px-20 xl:px-24 py-5 rounded-md">
       <form onSubmit={handleSubmit}>
-        <h1 className="text-4xl text-center font-semibold mb-2">Get a Free Estimate!</h1>
+        <h1 className="text-3xl text-center font-semibold mb-2">Get a Free Estimate!</h1>
 
         <div className="w-full mb-3">
           <label className="w-full">Name: <span className="text-red-500">*</span></label>

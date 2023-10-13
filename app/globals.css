@@ -37,3 +37,7 @@ body {
   width: 100%;
   height: 240px;
 }
+
+.service-gradient-container {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(82, 82, 82, 0.85) 57%, rgba(82, 82, 82, 0.95) 95%);
+}
