@@ -1,5 +1,4 @@
 "use client";
-import { EstimateDetails } from "@/services/nodemailerService";
 import { useState } from "react"
 
 function setNestedProp(schema: any, path: string, checked: boolean) {
@@ -21,6 +20,12 @@ export default function QuoteForm() {
     customerPhone: ''
   });
 
+  const [irrigationServices, setIrrigationServices] = useState({
+    accentLights: false,
+    floodLights: false,
+    other: false,
+  });
+
   const [landscapingServices, setLandscapingServices] = useState({
     lawncare: false,
     mulching: false,
@@ -36,12 +41,6 @@ export default function QuoteForm() {
     other: false,
   });
 
-  const [lightingServices, setLightingServices] = useState({
-    accentLights: false,
-    floodLights: false,
-    other: false,
-  });
-
   const [otherService, setOtherService] = useState("");
 
   const handleChange = (e: any) => {
@@ -54,6 +53,14 @@ export default function QuoteForm() {
     e.preventDefault();
  
     // Add your form submission logic here
+
+    let selectedIrrigationKeys: string[] = [];
+    Object.keys(irrigationServices).forEach((key, idx) => {
+      if (irrigationServices[key as keyof typeof irrigationServices] == true) {
+        selectedIrrigationKeys.push(key);
+      }
+    });
+
     let selectedLandscapingKeys: string[] = [];
     Object.keys(landscapingServices).forEach((key, idx) => {
       if (landscapingServices[key as keyof typeof landscapingServices] == true) {
@@ -68,19 +75,12 @@ export default function QuoteForm() {
       }
     });
 
-    let selectedLightingKeys: string[] = [];
-    Object.keys(lightingServices).forEach((key, idx) => {
-      if (lightingServices[key as keyof typeof lightingServices] == true) {
-        selectedLightingKeys.push(key);
-      }
-    });
-
     const quoteDataToSubmit = {
       ...quoteFormData,
       interestedServices: {
+        irrigation: selectedIrrigationKeys,
         landscaping: selectedLandscapingKeys,
         hardscaping: selectedHardscapingKeys,
-        lighting: selectedLightingKeys,
         other: otherService
       },
     };
@@ -119,6 +119,23 @@ export default function QuoteForm() {
 
         <h2 className="font-bold text-xl mt-6">Interested in:</h2>
         <div className="grid gap-x-4 gap-y-1 grid-cols-2 w-full leading-none">
+          <div className="mt-2">
+            <h3 className="font-semibold leading-none">Irrigation</h3>
+
+            <li className="flex items-center my-1">
+              <input type="checkbox" className="mr-2" name="irrigationServices.accentLights" checked={irrigationServices.accentLights} onChange={() => setIrrigationServices({...irrigationServices, accentLights: !irrigationServices.accentLights})} />
+              <span className="mt-1">Accent Lights</span>
+            </li>
+            <li className="flex items-center my-1">
+              <input type="checkbox" className="mr-2" name="irrigationServices.floodLights" checked={irrigationServices.floodLights} onChange={() => setIrrigationServices({...irrigationServices, floodLights: !irrigationServices.floodLights})} />
+              <span className="mt-1">Floodlights</span>
+            </li>
+            <li className="flex items-center my-1">
+              <input type="checkbox" className="mr-2" name="irrigationServices.other" checked={irrigationServices.other} onChange={() => setIrrigationServices({...irrigationServices, other: !irrigationServices.other})} />
+              <span className="mt-1">Other</span>
+            </li>
+          </div>
+
           <div className="mt-2">
             <h3 className="font-semibold leading-none">Landscaping</h3>
 
@@ -161,23 +178,6 @@ export default function QuoteForm() {
             </li>
             <li className="flex items-center my-1">
               <input type="checkbox" className="mr-2" name="hardscapingServices.other" checked={hardscapingServices.other} onChange={() => setHardscapingServices({...hardscapingServices, other: !hardscapingServices.other})} />
-              <span className="mt-1">Other</span>
-            </li>
-          </div>
-
-          <div className="mt-2">
-            <h3 className="font-semibold leading-none">Lighting</h3>
-
-            <li className="flex items-center my-1">
-              <input type="checkbox" className="mr-2" name="lightingServices.accentLights" checked={lightingServices.accentLights} onChange={() => setLightingServices({...lightingServices, accentLights: !lightingServices.accentLights})} />
-              <span className="mt-1">Accent Lights</span>
-            </li>
-            <li className="flex items-center my-1">
-              <input type="checkbox" className="mr-2" name="lightingServices.floodLights" checked={lightingServices.floodLights} onChange={() => setLightingServices({...lightingServices, floodLights: !lightingServices.floodLights})} />
-              <span className="mt-1">Floodlights</span>
-            </li>
-            <li className="flex items-center my-1">
-              <input type="checkbox" className="mr-2" name="lightingServices.other" checked={lightingServices.other} onChange={() => setLightingServices({...lightingServices, other: !lightingServices.other})} />
               <span className="mt-1">Other</span>
             </li>
           </div>

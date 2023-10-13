@@ -50,12 +50,7 @@ const servicePhotoMap = {
     image: hardscapingBg.src,
     pageUrl: "/hardscaping",
     blurb: "Step into a world of captivating hardscaping services. We specialize in crafting durable, elegant outdoor features, from intricate pathways to inviting patios. Our team blends creativity and expertise to bring your hardscaping visions to life, adding functionality and beauty to your outdoor oasis. Explore the possibilities with us today!",
-  },
-  "Lighting": {
-    image: carouselImage17.src,
-    pageUrl: "/lighting",
-    blurb: "Illuminate your nights with our enchanting outdoor lighting services. We design and install lighting solutions that enhance the beauty of your space while adding safety and ambiance. Let us create a captivating nocturnal atmosphere, bringing your outdoor area to life even after the sun sets. Discover the magic of light with us!",
-  },
+  }
 }
 
 export default function Home() {
@@ -85,11 +80,10 @@ export default function Home() {
                 className="ml-4 w-72 sm:w-96"
               />
 
-              <div className="grid grid-cols-2 grid-rows-2 gap-4 font-serif text-2xl sm:text-3xl text-center sm:text-left my-8 sm:my-10">
+              <div className="grid grid-cols-1 grid-rows-3 gap-4 font-serif text-2xl sm:text-3xl text-center sm:text-left my-8 sm:my-10">
+                <span><a href="/lighting">💦 Irrigation</a></span>
                 <span><a href="/landscaping">🌳 Landscaping</a></span>
                 <span><a href="/hardscaping">🧱 Hardscaping</a></span>
-                <span><a href="/lighting">💡 Lighting</a></span>
-                <span>💧 Water Features</span>
               </div>
             </div>
           </div>

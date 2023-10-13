@@ -4,7 +4,7 @@ export interface EstimateDetails {
   customerName: string;
   customerEmail: string;
   customerPhone: string;
-  interestedServices: { landscaping: string[], hardscaping: string[], lighting: string[], other: string }
+  interestedServices: { irrigation: string[], landscaping: string[], hardscaping: string[], other: string }
 }
 
 const serviceKeyToPrettyStringMap = {
@@ -16,20 +16,18 @@ const serviceKeyToPrettyStringMap = {
   patio: "Patio",
   walkway: "Walkway",
   retainingWall: "Retaining Wall",
-  accentLights: "Accent Lighting",
-  floodLights: "Flood Lights",
 }
 
 export function buildEmailBody(customerRequestDetails: EstimateDetails) {
+  const irrigationServicesHtmlList = customerRequestDetails.interestedServices.irrigation.map((service: string) => {
+    return `<li>${serviceKeyToPrettyStringMap[service as keyof typeof serviceKeyToPrettyStringMap]}</li>`;
+  }).join('\n');
+
   const landscapingServicesHtmlList = customerRequestDetails.interestedServices.landscaping.map((service: string) => {
     return `<li>${serviceKeyToPrettyStringMap[service as keyof typeof serviceKeyToPrettyStringMap]}</li>`;
   }).join('\n');
 
   const hardscapingServicesHtmlList = customerRequestDetails.interestedServices.hardscaping.map((service: string) => {
-    return `<li>${serviceKeyToPrettyStringMap[service as keyof typeof serviceKeyToPrettyStringMap]}</li>`;
-  }).join('\n');
-
-  const lightingServicesHtmlList = customerRequestDetails.interestedServices.lighting.map((service: string) => {
     return `<li>${serviceKeyToPrettyStringMap[service as keyof typeof serviceKeyToPrettyStringMap]}</li>`;
   }).join('\n');
 
@@ -53,6 +51,11 @@ export function buildEmailBody(customerRequestDetails: EstimateDetails) {
 
   <p style="margin-top: 30px">This customer is interested in an estimate on the following services:</p>
 
+  <span style="font-weight: bold">Irrigation:</span>
+  <ul>
+    ${irrigationServicesHtmlList}
+  </ul>
+
   <span style="font-weight: bold">Landscaping:</span>
   <ul>
     ${landscapingServicesHtmlList}
@@ -61,11 +64,6 @@ export function buildEmailBody(customerRequestDetails: EstimateDetails) {
   <span style="font-weight: bold">Hardscaping:</span>
   <ul>
     ${hardscapingServicesHtmlList}
-  </ul>
-
-  <span style="font-weight: bold">Lighting:</span>
-  <ul>
-    ${lightingServicesHtmlList}
   </ul>
 
   <span style="font-weight: bold">Other:</span>
