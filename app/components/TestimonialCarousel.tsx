@@ -6,6 +6,17 @@ import Image from "next/image";
 import arrowImg from "../../public/arrow.svg";
 import { useCallback } from "react";
 
+const testimonials = [
+  {
+    name: "David K.",
+    blurb: "Ascend does great landscaping work at a fair price! They were attentive to every detail of the project. 10/10!",
+  },
+  {
+    name: "Henry B.",
+    blurb: "Ascend does great landscaping work at a fair price! They were attentive to every detail of the project. 10/10!",
+  }
+]
+
 export default function TestimonialCarousel() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay({ delay: 10000, stopOnMouseEnter: true, })]);
 
@@ -22,29 +33,19 @@ export default function TestimonialCarousel() {
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
           {/* Testimonials */}
-          <div className="embla__slide">
-            <div className="px-16 flex flex-col items-center">
-              <Image
-                src={fiveStarsImg}
-                alt=""
-                height={30}
-              />
-              <span className="font-semibold text-xl mt-4">David K.</span>
-              <p>Ascend does great landscaping work at a fair price! They were attentive to every detail of the project. 10/10!</p>
+          { testimonials.map((testimonial) => 
+            <div className="embla__slide" key={testimonial.name}>
+              <div className="px-16 flex flex-col items-center">
+                <Image
+                  src={fiveStarsImg}
+                  alt=""
+                  height={30}
+                />
+                <span className="font-semibold text-xl mt-4">{testimonial.name}</span>
+                <p className="w-[90%]">{testimonial.blurb}</p>
+              </div>
             </div>
-          </div>
-
-          <div className="embla__slide">
-            <div className="px-16 flex flex-col items-center">
-              <Image
-                src={fiveStarsImg}
-                alt=""
-                height={30}
-              />
-              <span className="font-semibold text-xl mt-4">Henry B.</span>
-              <p>Ascend does great landscaping work at a fair price! They were attentive to every detail of the project. 10/10!</p>
-            </div>
-          </div>
+          )}
         </div>
       </div>
 

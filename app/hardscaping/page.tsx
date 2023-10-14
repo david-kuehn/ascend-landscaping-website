@@ -31,7 +31,7 @@ const hardscapingPageCarouselImages: StaticImageData[] = [carouselImage1, carous
 
 export default function Hardscaping() {
   return (
-    <main>
+    <main className="font-serif">
       <FullHeightContainer>
         <Navbar currentPage={2} />
 
@@ -56,11 +56,10 @@ export default function Hardscaping() {
               className="ml-8 w-80 sm:w-96"
             />
 
-            <div className="grid grid-cols-2 grid-rows-2 gap-4 font-serif text-2xl sm:text-3xl text-center sm:text-left my-8 sm:my-10">
+            <div className="grid grid-cols-1 grid-rows-3 gap-4 text-2xl sm:text-3xl text-center sm:text-left my-8 sm:my-10">
+              <span><a href="/irrigation">💦 Irrigation</a></span>
               <span><a href="/landscaping">🌳 Landscaping</a></span>
               <span><a href="/hardscaping">🧱 Hardscaping</a></span>
-              <span><a href="/lighting">💡 Lighting</a></span>
-              <span>💧 Water Features</span>
             </div>
 
             <span className="font-serif font-medium text-3xl">(630) 639-8089</span>

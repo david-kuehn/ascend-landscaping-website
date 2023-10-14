@@ -21,8 +21,10 @@ export default function QuoteForm() {
   });
 
   const [irrigationServices, setIrrigationServices] = useState({
-    accentLights: false,
-    floodLights: false,
+    sprinklerInstallation: false,
+    systemMaintenance: false,
+    winterization: false,
+    backflowTesting: false,
     other: false,
   });
 
@@ -123,12 +125,20 @@ export default function QuoteForm() {
             <h3 className="font-semibold leading-none">Irrigation</h3>
 
             <li className="flex items-center my-1">
-              <input type="checkbox" className="mr-2" name="irrigationServices.accentLights" checked={irrigationServices.accentLights} onChange={() => setIrrigationServices({...irrigationServices, accentLights: !irrigationServices.accentLights})} />
-              <span className="mt-1">Accent Lights</span>
+              <input type="checkbox" className="mr-2" name="irrigationServices.sprinklerInstallation" checked={irrigationServices.sprinklerInstallation} onChange={() => setIrrigationServices({...irrigationServices, sprinklerInstallation: !irrigationServices.sprinklerInstallation})} />
+              <span className="mt-1">Sprinkler Installation</span>
             </li>
             <li className="flex items-center my-1">
-              <input type="checkbox" className="mr-2" name="irrigationServices.floodLights" checked={irrigationServices.floodLights} onChange={() => setIrrigationServices({...irrigationServices, floodLights: !irrigationServices.floodLights})} />
-              <span className="mt-1">Floodlights</span>
+              <input type="checkbox" className="mr-2" name="irrigationServices.systemMaintenance" checked={irrigationServices.systemMaintenance} onChange={() => setIrrigationServices({...irrigationServices, systemMaintenance: !irrigationServices.systemMaintenance})} />
+              <span className="mt-1">Maintenance</span>
+            </li>
+            <li className="flex items-center my-1">
+              <input type="checkbox" className="mr-2" name="irrigationServices.winterization" checked={irrigationServices.winterization} onChange={() => setIrrigationServices({...irrigationServices, winterization: !irrigationServices.winterization})} />
+              <span className="mt-1">Winterization</span>
+            </li>
+            <li className="flex items-center my-1">
+              <input type="checkbox" className="mr-2" name="irrigationServices.backflowTesting" checked={irrigationServices.backflowTesting} onChange={() => setIrrigationServices({...irrigationServices, backflowTesting: !irrigationServices.backflowTesting})} />
+              <span className="mt-1">Backflow Testing</span>
             </li>
             <li className="flex items-center my-1">
               <input type="checkbox" className="mr-2" name="irrigationServices.other" checked={irrigationServices.other} onChange={() => setIrrigationServices({...irrigationServices, other: !irrigationServices.other})} />

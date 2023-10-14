@@ -8,6 +8,10 @@ export interface EstimateDetails {
 }
 
 const serviceKeyToPrettyStringMap = {
+  sprinklerInstallation: "Sprinkler Installation",
+  systemMaintenance: "System Maintenance",
+  winterization: "Winterization",
+  backflowTesting: "Backflow Testing",
   lawncare: "Lawncare",
   mulching: "Mulching",
   snowRemoval: "Snow Removal",
