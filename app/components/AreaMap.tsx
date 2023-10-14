@@ -1,34 +1,32 @@
 "use client"
-import { Circle, GoogleMap, Marker, useJsApiLoader } from "@react-google-maps/api";
-import { useMemo } from "react";
+
+// @ts-ignore
+import mapboxgl from "mapbox-gl"; // tslint-disable-line import/no-webpack-loader-syntax
+mapboxgl.accessToken = "pk.eyJ1IjoiZG1rdWVobjYiLCJhIjoiY2xucGNhMjliMDlqMzJqcnJpMDAyb2JneSJ9.jhTKWoHdvdF-aE57QQLDuw";
+import "mapbox-gl/dist/mapbox-gl.css";
+
+import { useEffect, useMemo, useRef, useState } from "react";
 
 export default function AreaMap() {
-  const { isLoaded } = useJsApiLoader({
-    id: 'google-map-script',
-   // @ts-ignore
-    googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY,
+  const mapContainer = useRef(null);
+  const map = useRef(null);
+  const [lng, setLng] = useState(-88.228535);
+  const [lat, setLat] = useState(41.893248);
+  const [zoom, setZoom] = useState(9);
+
+  useEffect(() => {
+    if (map.current) return; // initialize map only once
+    map.current = new mapboxgl.Map({
+      container: mapContainer.current,
+      style: 'mapbox://styles/mapbox/streets-v12',
+      center: [lng, lat],
+      zoom: zoom
+    });
   });
 
-  const center = useMemo(() => ({ lat: 41.893248, lng: -88.228535 }), []);
-
-  if (!isLoaded) return <div>Loading...</div>;
-
   return (
-    <GoogleMap
-      zoom={10}
-      center={center}
-      mapContainerClassName="map-container"
-      options={{
-        mapTypeControl: false,
-        fullscreenControl: false,
-        streetViewControl: false,
-      }}
-    >
-      <Circle
-        options={{fillColor: "plum", strokeColor: "purple"}}
-        center={center}
-        radius={20000}
-      />
-    </GoogleMap>
+    <div>
+      <div ref={mapContainer} className="map-container" />
+    </div>
   )
 }
