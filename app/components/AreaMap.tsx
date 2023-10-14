@@ -1,10 +1,11 @@
 "use client"
-import { Circle, GoogleMap, Marker, useLoadScript } from "@react-google-maps/api";
+import { Circle, GoogleMap, Marker, useJsApiLoader } from "@react-google-maps/api";
 import { useMemo } from "react";
 
 export default function AreaMap() {
-  const { isLoaded } = useLoadScript({
-    // @ts-ignore
+  const { isLoaded } = useJsApiLoader({
+    id: 'google-map-script',
+   // @ts-ignore
     googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY,
   });
 
