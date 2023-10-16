@@ -1,25 +1,30 @@
-import { request } from "http";
-
 export interface EstimateDetails {
   customerName: string;
   customerEmail: string;
   customerPhone: string;
+  customerBudget: string;
   interestedServices: { irrigation: string[], landscaping: string[], hardscaping: string[], other: string }
 }
 
 const serviceKeyToPrettyStringMap = {
-  sprinklerInstallation: "Sprinkler Installation",
+  springActivation: "Spring Start Ups / Activation",
   systemMaintenance: "System Maintenance",
-  winterization: "Winterization",
+  repairs: "Repairs",
+  winterization: "Shut Downs / Winterization",
   backflowTesting: "Backflow Testing",
-  lawncare: "Lawncare",
+  rpzCertification: "RPZ Certification",
+  springFallCleanUp: "Spring/Fall Clean Up",
+  planting: "Planting",
+  decorativeStone: "Decorative Stone",
   mulching: "Mulching",
-  snowRemoval: "Snow Removal",
-  plantTreeCare: "Plant/Tree Care",
-  other: "Other Services (customer did not specify)",
+  bushRemoval: "Bush Removal",
   patio: "Patio",
   walkway: "Walkway",
   retainingWall: "Retaining Wall",
+  steps: "Steps",
+  firepits: "Firepits",
+  pavilionGazebo: "Pavilion / Gazebo",
+  other: "Other Services (customer did not specify)",
 }
 
 export function buildEmailBody(customerRequestDetails: EstimateDetails) {
@@ -52,6 +57,7 @@ export function buildEmailBody(customerRequestDetails: EstimateDetails) {
   <label style="font-weight: bold">Name: </label><span>${customerRequestDetails.customerName}</span><br />
   <label style="font-weight: bold">Email: </label><span>${customerRequestDetails.customerEmail}</span><br />
   <label style="font-weight: bold">Phone: </label><span>${customerRequestDetails.customerPhone ? customerRequestDetails.customerPhone : "No phone number provided."}</span><br />
+  <label style="font-weight: bold">Budget: </label><span>${customerRequestDetails.customerBudget ? customerRequestDetails.customerBudget : "No budget provided."}</span><br />
 
   <p style="margin-top: 30px">This customer is interested in an estimate on the following services:</p>
 

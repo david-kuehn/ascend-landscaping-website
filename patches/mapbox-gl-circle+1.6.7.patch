@@ -1,0 +1,16 @@
+diff --git a/node_modules/mapbox-gl-circle/lib/main.js b/node_modules/mapbox-gl-circle/lib/main.js
+index 72364e6..852c1b9 100644
+--- a/node_modules/mapbox-gl-circle/lib/main.js
++++ b/node_modules/mapbox-gl-circle/lib/main.js
+@@ -12,9 +12,11 @@ const turfDistance = require('@turf/distance');
+ const turfBearing = require('@turf/bearing');
+ const turfHelpers = require('@turf/helpers');
+ 
++/*
+ if (window && typeof window.MapboxCircle === 'function') {
+     throw new TypeError('mapbox-gl-circle-' + window.MapboxCircle.VERSION + ' already loaded');
+ }
++*/
+ 
+ /**
+  * A `google.maps.Circle` replacement for Mapbox GL JS, rendering a "spherical cap" on top of the world.

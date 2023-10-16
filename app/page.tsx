@@ -9,6 +9,9 @@ import CallNowButton from "./components/CallNowButton";
 import QuoteForm from "./components/QuoteForm";
 import TestimonialCarousel from "./components/TestimonialCarousel";
 import AreaMap from "./components/AreaMap";
+import phoneIcon from "../public/phone_icon.png";
+import emailIcon from "../public/email-icon.png";
+import locationIcon from "../public/location-icon.png";
 
 import carouselImage1 from "../public/carousel-images/homepage/carousel-00001.png";
 import carouselImage2 from "../public/carousel-images/homepage/carousel-00002.png";
@@ -158,15 +161,32 @@ export default function Home() {
         We&apos;re proud to service the Chicagoland area, including the Northwestern, Western, and Southwestern suburbs!<br />Cities that we service include:
         </p>
 
-        <ul className="w-3/4 list-disc grid grid-cols-2 justify-items-center mt-3 font-medium">
+        <ul className="w-3/4 list-disc grid grid-cols-3 justify-items-center mt-3 text-sm font-light">
           <li>West Chicago</li>
           <li>Winfield</li>
+          <li>Carol Stream</li>
           <li>Warrenville</li>
-          <li>Naperville</li>
-          <li>Lombard</li>
           <li>Wheaton</li>
           <li>St. Charles</li>
+          <li>Naperville</li>
+          <li>Aurora</li>
+          <li>Glen Ellyn</li>
+          <li>Bartlett</li>
+          <li>Batavia</li>
+          <li>Wayne</li>
+          <li>Campton Hills</li>
           <li>Addison</li>
+          <li>Lombard</li>
+          <li>Elgin</li>
+          <li>South Elgin</li>
+          <li>Schaumburg</li>
+          <li>Bolingbrook</li>
+          <li>Downers Grove</li>
+          <li>Plainfield</li>
+          <li>Oswego</li>
+          <li>Sugar Grove</li>
+          <li>Elmhurst</li>
+          <li className="col-span-3 self-center">Oak Brook</li>
         </ul>
 
         <p className="mt-4">and more!</p>
@@ -206,17 +226,42 @@ export default function Home() {
         <QuoteForm />
       </div>
 
-      <div className="w-full my-10">
+      <div className="w-full mt-10 mb-6">
         <hr className="w-[90%] mx-auto border-gray-400" />
       </div>
 
-      <div className="w-full flex flex-col items-center justify-center text-black leading-none pb-10">
-        <h1 className="font-semibold text-lg">Ascend Landscaping</h1>
-        <span className="mb-4">West Chicago, IL</span>
-        <a href="tel:630-639-8089" className="mb-1">
+      <div className="w-full flex flex-col items-center justify-center text-black leading-none">
+        <h1 className="font-semibold text-xl mb-2">Ascend Landscaping</h1>
+        <span className="font-semibold">Business Hours</span>
+        <span>Monday - Friday 7am-9pm</span>
+        <span>Saturday & Sunday 8am-5pm</span>
+
+      </div>
+      <div className="mt-6 w-56 mx-auto text-black leading-none pb-12">
+        <div className="flex items-center gap-2">
+          <Image
+            className="block md:hidden h-4 w-4"
+            src={locationIcon}
+            alt=""
+          />
+          <span>813 E Washingston St<br />West Chicago, IL 60185</span>
+        </div>
+
+        <a href="tel:630-639-8089" className="mt-2 flex items-center gap-2">
+          <Image
+            className="block md:hidden h-4 w-4"
+            src={phoneIcon}
+            alt=""
+          />
           <span className="text-[#6EA750] underline text-lg">(630) 639-8089</span>
         </a>
-        <a href="mailto:ascend.landscaping1@gmail.com">
+
+        <a href="mailto:ascend.landscaping1@gmail.com" className="mt-2 flex items-center gap-2">
+          <Image
+            className="block md:hidden h-4 w-4"
+            src={emailIcon}
+            alt=""
+          />
           <span className="text-[#6EA750] underline">ascend.landscaping1@gmail.com</span>
         </a>
       </div>
