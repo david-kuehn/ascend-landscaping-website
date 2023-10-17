@@ -74,7 +74,7 @@ export default function Home() {
             }}
           >
             <div
-              className="flex-1 flex flex-col items-center justify-center w-full"
+              className="flex-1 flex gap-3 flex-col items-center justify-center w-full"
               style={{
                 backdropFilter: "blur(1px) brightness(70%)",
                 WebkitBackdropFilter: "blur(1px) brightness(70%)",
@@ -83,10 +83,10 @@ export default function Home() {
               <Image
                 src={ascendLogo}
                 alt=""
-                className="ml-4 w-72 sm:w-96"
+                className="ml-4 w-64 sm:w-96"
               />
 
-              <div className="grid grid-cols-1 grid-rows-3 gap-4 text-2xl sm:text-3xl text-center sm:text-left my-8 sm:my-10">
+              <div className="grid grid-cols-1 grid-rows-3 gap-2 text-xl sm:text-3xl text-center sm:text-left">
                 <span><a href="/irrigation">💦 Irrigation</a></span>
                 <span><a href="/landscaping">🌳 Landscaping</a></span>
                 <span><a href="/hardscaping">🧱 Hardscaping</a></span>

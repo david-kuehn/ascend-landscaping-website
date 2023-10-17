@@ -19,6 +19,9 @@ module.exports = {
       },
       minHeight: {
         wfa: '-webkit-fill-available',
+      },
+      gridTemplateColumns: {
+        formitem: '17% 1fr',
       }
     },
   },

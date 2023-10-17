@@ -115,104 +115,104 @@ export default function QuoteForm() {
         </div>
 
         <h2 className="font-bold text-xl mt-6">Interested in:</h2>
-        <div className="grid gap-x-4 gap-y-1 grid-cols-2 w-full leading-none">
+        <div className="grid gap-x-3 gap-y-3 grid-cols-2 w-full leading-none text-sm">
           <div className="mt-2">
-            <h3 className="font-semibold leading-none">Irrigation</h3>
+            <h3 className="font-semibold leading-none text-base">Irrigation</h3>
 
-            <li className="flex items-center my-1">
-              <input type="checkbox" className="mr-2" name="irrigationServices.springActivation" checked={irrigationServices.springActivation} onChange={() => setIrrigationServices({...irrigationServices, springActivation: !irrigationServices.springActivation})} />
+            <li className="grid grid-cols-formitem items-center mt-1">
+              <input type="checkbox" className="w-4" name="irrigationServices.springActivation" checked={irrigationServices.springActivation} onChange={() => setIrrigationServices({...irrigationServices, springActivation: !irrigationServices.springActivation})} />
               <span className="mt-1">Spring Start Ups / Activation</span>
             </li>
-            <li className="flex items-center my-1">
-              <input type="checkbox" className="mr-2" name="irrigationServices.systemMaintenance" checked={irrigationServices.systemMaintenance} onChange={() => setIrrigationServices({...irrigationServices, systemMaintenance: !irrigationServices.systemMaintenance})} />
+            <li className="grid grid-cols-formitem items-center mt-1">
+              <input type="checkbox" className="mr-2 w-4" name="irrigationServices.systemMaintenance" checked={irrigationServices.systemMaintenance} onChange={() => setIrrigationServices({...irrigationServices, systemMaintenance: !irrigationServices.systemMaintenance})} />
               <span className="mt-1">Maintenance</span>
             </li>
-            <li className="flex items-center my-1">
-              <input type="checkbox" className="mr-2" name="irrigationServices.repairs" checked={irrigationServices.repairs} onChange={() => setIrrigationServices({...irrigationServices, repairs: !irrigationServices.repairs})} />
+            <li className="grid grid-cols-formitem items-center mt-1">
+              <input type="checkbox" className="mr-2 w-4" name="irrigationServices.repairs" checked={irrigationServices.repairs} onChange={() => setIrrigationServices({...irrigationServices, repairs: !irrigationServices.repairs})} />
               <span className="mt-1">Repairs</span>
             </li>
-            <li className="flex items-center my-1">
-              <input type="checkbox" className="mr-2" name="irrigationServices.winterization" checked={irrigationServices.winterization} onChange={() => setIrrigationServices({...irrigationServices, winterization: !irrigationServices.winterization})} />
+            <li className="grid grid-cols-formitem items-center mt-1">
+              <input type="checkbox" className="mr-2 w-4" name="irrigationServices.winterization" checked={irrigationServices.winterization} onChange={() => setIrrigationServices({...irrigationServices, winterization: !irrigationServices.winterization})} />
               <span className="mt-1">Shut Downs / Winterization</span>
             </li>
-            <li className="flex items-center my-1">
-              <input type="checkbox" className="mr-2" name="irrigationServices.backflowTesting" checked={irrigationServices.backflowTesting} onChange={() => setIrrigationServices({...irrigationServices, backflowTesting: !irrigationServices.backflowTesting})} />
+            <li className="grid grid-cols-formitem items-center mt-1">
+              <input type="checkbox" className="mr-2 w-4" name="irrigationServices.backflowTesting" checked={irrigationServices.backflowTesting} onChange={() => setIrrigationServices({...irrigationServices, backflowTesting: !irrigationServices.backflowTesting})} />
               <span className="mt-1">Backflow Testing</span>
             </li>
-            <li className="flex items-center my-1">
-              <input type="checkbox" className="mr-2" name="irrigationServices.rpzCertification" checked={irrigationServices.rpzCertification} onChange={() => setIrrigationServices({...irrigationServices, rpzCertification: !irrigationServices.rpzCertification})} />
+            <li className="grid grid-cols-formitem items-center mt-1">
+              <input type="checkbox" className="mr-2 w-4" name="irrigationServices.rpzCertification" checked={irrigationServices.rpzCertification} onChange={() => setIrrigationServices({...irrigationServices, rpzCertification: !irrigationServices.rpzCertification})} />
               <span className="mt-1">RPZ Certification</span>
             </li>
-            <li className="flex items-center my-1">
-              <input type="checkbox" className="mr-2" name="irrigationServices.other" checked={irrigationServices.other} onChange={() => setIrrigationServices({...irrigationServices, other: !irrigationServices.other})} />
+            <li className="grid grid-cols-formitem items-center mt-1">
+              <input type="checkbox" className="mr-2 w-4" name="irrigationServices.other" checked={irrigationServices.other} onChange={() => setIrrigationServices({...irrigationServices, other: !irrigationServices.other})} />
               <span className="mt-1">Other</span>
             </li>
           </div>
 
           <div className="mt-2">
-            <h3 className="font-semibold leading-none">Landscaping</h3>
+            <h3 className="font-semibold leading-none text-base">Landscaping</h3>
 
-            <li className="flex items-center my-1">
-              <input type="checkbox" className="mr-2" name="landscapingServices.springFallCleanUp" checked={landscapingServices.springFallCleanUp} onChange={() => setLandscapingServices({...landscapingServices, springFallCleanUp: !landscapingServices.springFallCleanUp})} />
+            <li className="grid grid-cols-formitem items-center mt-1">
+              <input type="checkbox" className="mr-2 w-4" name="landscapingServices.springFallCleanUp" checked={landscapingServices.springFallCleanUp} onChange={() => setLandscapingServices({...landscapingServices, springFallCleanUp: !landscapingServices.springFallCleanUp})} />
               <span className="mt-1">Spring/Fall Clean Up</span>
             </li>
-            <li className="flex items-center my-1">
-              <input type="checkbox" className="mr-2" name="landscapingServices.planting" checked={landscapingServices.planting} onChange={() => setLandscapingServices({...landscapingServices, planting: !landscapingServices.planting})} />
+            <li className="grid grid-cols-formitem items-center mt-1">
+              <input type="checkbox" className="mr-2 w-4" name="landscapingServices.planting" checked={landscapingServices.planting} onChange={() => setLandscapingServices({...landscapingServices, planting: !landscapingServices.planting})} />
               <span className="mt-1">Planting</span>
             </li>
-            <li className="flex items-center my-1">
-              <input type="checkbox" className="mr-2" name="landscapingServices.decorativeStone" checked={landscapingServices.decorativeStone} onChange={() => setLandscapingServices({...landscapingServices, decorativeStone: !landscapingServices.decorativeStone})} />
+            <li className="grid grid-cols-formitem items-center mt-1">
+              <input type="checkbox" className="mr-2 w-4" name="landscapingServices.decorativeStone" checked={landscapingServices.decorativeStone} onChange={() => setLandscapingServices({...landscapingServices, decorativeStone: !landscapingServices.decorativeStone})} />
               <span className="mt-1">Decorative Stone</span>
             </li>
-            <li className="flex items-center my-1">
-              <input type="checkbox" className="mr-2" name="landscapingServices.mulching" checked={landscapingServices.mulching} onChange={() => setLandscapingServices({...landscapingServices, mulching: !landscapingServices.mulching})} />
+            <li className="grid grid-cols-formitem items-center mt-1">
+              <input type="checkbox" className="mr-2 w-4" name="landscapingServices.mulching" checked={landscapingServices.mulching} onChange={() => setLandscapingServices({...landscapingServices, mulching: !landscapingServices.mulching})} />
               <span className="mt-1">Mulching</span>
             </li>
-            <li className="flex items-center my-1">
-              <input type="checkbox" className="mr-2" name="landscapingServices.bushRemoval" checked={landscapingServices.bushRemoval} onChange={() => setLandscapingServices({...landscapingServices, bushRemoval: !landscapingServices.bushRemoval})} />
+            <li className="grid grid-cols-formitem items-center mt-1">
+              <input type="checkbox" className="mr-2 w-4" name="landscapingServices.bushRemoval" checked={landscapingServices.bushRemoval} onChange={() => setLandscapingServices({...landscapingServices, bushRemoval: !landscapingServices.bushRemoval})} />
               <span className="mt-1">Bush Removal</span>
             </li>
-            <li className="flex items-center my-1">
-              <input type="checkbox" className="mr-2" name="landscapingServices.other" checked={landscapingServices.other} onChange={() => setLandscapingServices({...landscapingServices, other: !landscapingServices.other})} />
+            <li className="grid grid-cols-formitem items-center mt-1">
+              <input type="checkbox" className="mr-2 w-4" name="landscapingServices.other" checked={landscapingServices.other} onChange={() => setLandscapingServices({...landscapingServices, other: !landscapingServices.other})} />
               <span className="mt-1">Other</span>
             </li>
           </div>
 
           <div className="mt-2">
-            <h3 className="font-semibold leading-none">Hardscaping</h3>
+            <h3 className="font-semibold leading-none text-base">Hardscaping</h3>
 
-            <li className="flex items-center my-1">
-              <input type="checkbox" className="mr-2" name="hardscapingServices.patio" checked={hardscapingServices.patio} onChange={() => setHardscapingServices({...hardscapingServices, patio: !hardscapingServices.patio})} />
+            <li className="grid grid-cols-formitem items-center mt-1">
+              <input type="checkbox" className="mr-2 w-4" name="hardscapingServices.patio" checked={hardscapingServices.patio} onChange={() => setHardscapingServices({...hardscapingServices, patio: !hardscapingServices.patio})} />
               <span className="mt-1">Patio</span>
             </li>
-            <li className="flex items-center my-1">
-              <input type="checkbox" className="mr-2" name="hardscapingServices.walkway" checked={hardscapingServices.walkway} onChange={() => setHardscapingServices({...hardscapingServices, walkway: !hardscapingServices.walkway})} />
+            <li className="grid grid-cols-formitem items-center mt-1">
+              <input type="checkbox" className="mr-2 w-4" name="hardscapingServices.walkway" checked={hardscapingServices.walkway} onChange={() => setHardscapingServices({...hardscapingServices, walkway: !hardscapingServices.walkway})} />
               <span className="mt-1">Walkway</span>
             </li>
-            <li className="flex items-center my-1">
-              <input type="checkbox" className="mr-2" name="hardscapingServices.retainingWall" checked={hardscapingServices.retainingWall} onChange={() => setHardscapingServices({...hardscapingServices, retainingWall: !hardscapingServices.retainingWall})} />
+            <li className="grid grid-cols-formitem items-center mt-1">
+              <input type="checkbox" className="mr-2 w-4" name="hardscapingServices.retainingWall" checked={hardscapingServices.retainingWall} onChange={() => setHardscapingServices({...hardscapingServices, retainingWall: !hardscapingServices.retainingWall})} />
               <span className="mt-1">Retaining Wall</span>
             </li>
-            <li className="flex items-center my-1">
-              <input type="checkbox" className="mr-2" name="hardscapingServices.steps" checked={hardscapingServices.steps} onChange={() => setHardscapingServices({...hardscapingServices, steps: !hardscapingServices.steps})} />
+            <li className="grid grid-cols-formitem items-center mt-1">
+              <input type="checkbox" className="mr-2 w-4" name="hardscapingServices.steps" checked={hardscapingServices.steps} onChange={() => setHardscapingServices({...hardscapingServices, steps: !hardscapingServices.steps})} />
               <span className="mt-1">Steps</span>
             </li>
-            <li className="flex items-center my-1">
-              <input type="checkbox" className="mr-2" name="hardscapingServices.firepits" checked={hardscapingServices.firepits} onChange={() => setHardscapingServices({...hardscapingServices, firepits: !hardscapingServices.firepits})} />
+            <li className="grid grid-cols-formitem items-center mt-1">
+              <input type="checkbox" className="mr-2 w-4" name="hardscapingServices.firepits" checked={hardscapingServices.firepits} onChange={() => setHardscapingServices({...hardscapingServices, firepits: !hardscapingServices.firepits})} />
               <span className="mt-1">Firepit</span>
             </li>
-            <li className="flex items-center my-1">
-              <input type="checkbox" className="mr-2" name="hardscapingServices.pavilionGazebo" checked={hardscapingServices.pavilionGazebo} onChange={() => setHardscapingServices({...hardscapingServices, pavilionGazebo: !hardscapingServices.pavilionGazebo})} />
-              <span className="mt-1">Pavilion/Gazebo</span>
+            <li className="grid grid-cols-formitem items-center mt-1">
+              <input type="checkbox" className="mr-2 w-4" name="hardscapingServices.pavilionGazebo" checked={hardscapingServices.pavilionGazebo} onChange={() => setHardscapingServices({...hardscapingServices, pavilionGazebo: !hardscapingServices.pavilionGazebo})} />
+              <span className="mt-1">Pavilion / Gazebo</span>
             </li>
-            <li className="flex items-center my-1">
-              <input type="checkbox" className="mr-2" name="hardscapingServices.other" checked={hardscapingServices.other} onChange={() => setHardscapingServices({...hardscapingServices, other: !hardscapingServices.other})} />
+            <li className="grid grid-cols-formitem items-center mt-1">
+              <input type="checkbox" className="mr-2 w-4" name="hardscapingServices.other" checked={hardscapingServices.other} onChange={() => setHardscapingServices({...hardscapingServices, other: !hardscapingServices.other})} />
               <span className="mt-1">Other</span>
             </li>
           </div>
 
           <div className="mt-2 flex flex-col">
-            <h3 className="font-semibold leading-none">Something else:</h3>
+            <h3 className="font-semibold leading-none text-base">Something else:</h3>
 
             <textarea placeholder="What're you looking for?" className="w-full flex-1 mt-1 p-1 rounded-sm" value={otherService} onChange={(e) => setOtherService(e.target.value)} />
           </div>
@@ -220,36 +220,36 @@ export default function QuoteForm() {
 
         <h2 className="font-bold text-xl mt-6">Budget</h2>
         <div className="grid gap-x-2 grid-cols-2 w-full leading-none">
-          <li className="flex items-center my-1">
-            <input type="radio" className="mr-1" name="customerBudget" onChange={() => setQuoteFormData({...quoteFormData, customerBudget: "$0-2,000"})} />
+          <li className="grid grid-cols-formitem items-center mt-1">
+            <input type="radio" className="mr-1 w-4" name="customerBudget" onChange={() => setQuoteFormData({...quoteFormData, customerBudget: "$0-2,000"})} />
             <span className="mt-1">$0-$2,000</span>
           </li>
-          <li className="flex items-center my-1">
-            <input type="radio" className="mr-1" name="customerBudget" onChange={() => setQuoteFormData({...quoteFormData, customerBudget: "$2,000-$8,000"})} />
+          <li className="grid grid-cols-formitem items-center mt-1">
+            <input type="radio" className="mr-1 w-4" name="customerBudget" onChange={() => setQuoteFormData({...quoteFormData, customerBudget: "$2,000-$8,000"})} />
             <span className="mt-1">$2,000-$8,000</span>
           </li>
-          <li className="flex items-center my-1">
-            <input type="radio" className="mr-1" name="customerBudget" onChange={() => setQuoteFormData({...quoteFormData, customerBudget: "$8,000-$15,000"})} />
+          <li className="grid grid-cols-formitem items-center mt-1">
+            <input type="radio" className="mr-1 w-4" name="customerBudget" onChange={() => setQuoteFormData({...quoteFormData, customerBudget: "$8,000-$15,000"})} />
             <span className="mt-1">$8,000-$15,000</span>
           </li>
-          <li className="flex items-center my-1">
-            <input type="radio" className="mr-1" name="customerBudget" onChange={() => setQuoteFormData({...quoteFormData, customerBudget: "$15,000-$30,000"})} />
+          <li className="grid grid-cols-formitem items-center mt-1">
+            <input type="radio" className="mr-1 w-4" name="customerBudget" onChange={() => setQuoteFormData({...quoteFormData, customerBudget: "$15,000-$30,000"})} />
             <span className="mt-1">$15,000-$30,000</span>
           </li>
-          <li className="flex items-center my-1">
-            <input type="radio" className="mr-1" name="customerBudget" onChange={() => setQuoteFormData({...quoteFormData, customerBudget: "$30,000-$50,000"})} />
+          <li className="grid grid-cols-formitem items-center mt-1">
+            <input type="radio" className="mr-1 w-4" name="customerBudget" onChange={() => setQuoteFormData({...quoteFormData, customerBudget: "$30,000-$50,000"})} />
             <span className="mt-1">$30,000-$50,000</span>
           </li>
-          <li className="flex items-center my-1">
-            <input type="radio" className="mr-1" name="customerBudget" onChange={() => setQuoteFormData({...quoteFormData, customerBudget: "$50,000-$80,000"})} />
+          <li className="grid grid-cols-formitem items-center mt-1">
+            <input type="radio" className="mr-1 w-4" name="customerBudget" onChange={() => setQuoteFormData({...quoteFormData, customerBudget: "$50,000-$80,000"})} />
             <span className="mt-1">$50,000-$80,000</span>
           </li>
-          <li className="flex items-center my-1">
-            <input type="radio" className="mr-1" name="customerBudget" onChange={() => setQuoteFormData({...quoteFormData, customerBudget: "$80,000-$100,000"})} />
+          <li className="grid grid-cols-formitem items-center mt-1">
+            <input type="radio" className="mr-1 w-4" name="customerBudget" onChange={() => setQuoteFormData({...quoteFormData, customerBudget: "$80,000-$100,000"})} />
             <span className="mt-1">$80,000-$100,000</span>
           </li>
-          <li className="flex items-center my-1">
-            <input type="radio" className="mr-1" name="customerBudget" onChange={() => setQuoteFormData({...quoteFormData, customerBudget: "$100,000+"})} />
+          <li className="grid grid-cols-formitem items-center mt-1">
+            <input type="radio" className="mr-1 w-4" name="customerBudget" onChange={() => setQuoteFormData({...quoteFormData, customerBudget: "$100,000+"})} />
             <span className="mt-1">$100,000+</span>
           </li>
         </div>
