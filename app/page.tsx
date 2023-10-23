@@ -12,6 +12,8 @@ import AreaMap from "./components/AreaMap";
 import phoneIcon from "../public/phone_icon.png";
 import emailIcon from "../public/email-icon.png";
 import locationIcon from "../public/location-icon.png";
+import fbIcon from "../public/fb-icon.png";
+import igIcon from "../public/ig-icon.png";
 
 import carouselImage1 from "../public/carousel-images/homepage/carousel-00001.png";
 import carouselImage2 from "../public/carousel-images/homepage/carousel-00002.png";
@@ -96,10 +98,8 @@ export default function Home() {
 
           <div className="text-center text-black flex flex-col items-center justify-start pt-5">
             <h1 className="font-medium text-2xl">Crafting beautiful outdoor spaces for your Chicagoland home!</h1>
-            <p className="text-black text-lg leading-snug text-center w-3/4 sm:w-3/5 max-w-[50rem] my-4 sm:my-9">
-              Want to bring new life to your outdoor living spaces? At Ascend Landscaping, we make our clients’ exterior
-              dreams come true with a combination of <strong>visually appealing design, superior material selection, and top-notch customer service</strong>.
-              For your next outdoor project, go with Ascend!
+            <p className="text-black leading-snug text-center w-3/4 sm:w-3/5 max-w-[50rem] mt-2 mb-6 sm:my-9">
+            Welcome to Ascend Irrigation and Landscaping! As a family-owned company with <strong>over 15 years of experience</strong>, we take immense pride in providing top-notch services in all aspects of <strong>irrigation and landscaping</strong>. Our dedicated team of experts is committed to transforming your outdoor spaces into breathtaking havens that truly reflect your vision and style. Whether you&apos;re looking to enhance the beauty of your <strong>residential property</strong> or seeking professional solutions for your <strong>commercial space</strong>, we have the knowledge, skills, and passion to exceed your expectations. From designing and installing <strong>efficient irrigation systems</strong> to creating <strong>stunning landscapes</strong> that stand the test of time, we are here to bring your dreams to life. Join us on this journey and let us help you ascend to new heights of outdoor <strong>beauty and functionality</strong>.
             </p>
           </div>
         </div>
@@ -231,13 +231,31 @@ export default function Home() {
       </div>
 
       <div className="w-full flex flex-col items-center justify-center text-black leading-none">
-        <h1 className="font-semibold text-xl mb-2">Ascend Landscaping</h1>
-        <span className="font-semibold">Business Hours</span>
+        <h1 className="font-semibold text-2xl mb-2">Ascend Irrigation & Landscaping</h1>
+
+        <div className="flex items-center justify-center mb-4">
+          <a href="https://www.instagram.com/ascend_landscaping/" target="_blank">
+            <Image
+              src={fbIcon}
+              alt=""
+              width={35}
+            />
+          </a>
+          <a href="https://www.instagram.com/ascend_landscaping/" target="_blank">
+            <Image
+              src={igIcon}
+              alt=""
+              width={55}
+            />
+          </a>
+        </div>
+
+        <span className="font-semibold text-lg">Business Hours</span>
         <span>Monday - Friday 7am-9pm</span>
         <span>Saturday & Sunday 8am-5pm</span>
 
       </div>
-      <div className="mt-6 w-56 mx-auto text-black leading-none pb-12">
+      <div className="mt-6 w-56 mx-auto text-black text-lg leading-none pb-12">
         <div className="flex items-center gap-2">
           <Image
             className="block md:hidden h-4 w-4"
