@@ -1,5 +1,6 @@
 export interface EstimateDetails {
   customerName: string;
+  customerAddress: string;
   customerEmail: string;
   customerPhone: string;
   customerBudget: string;
@@ -55,6 +56,7 @@ export function buildEmailBody(customerRequestDetails: EstimateDetails) {
 
   <h3>Customer Details:</h3><br />
   <label style="font-weight: bold">Name: </label><span>${customerRequestDetails.customerName}</span><br />
+  <label style="font-weight: bold">Address: </label><span>${customerRequestDetails.customerAddress ? customerRequestDetails.customerAddress : "No address provided."}</span><br />
   <label style="font-weight: bold">Email: </label><span>${customerRequestDetails.customerEmail}</span><br />
   <label style="font-weight: bold">Phone: </label><span>${customerRequestDetails.customerPhone ? customerRequestDetails.customerPhone : "No phone number provided."}</span><br />
   <label style="font-weight: bold">Budget: </label><span>${customerRequestDetails.customerBudget ? customerRequestDetails.customerBudget : "No budget provided."}</span><br />

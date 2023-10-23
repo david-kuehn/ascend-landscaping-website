@@ -4,6 +4,7 @@ import { useState } from "react"
 export default function QuoteForm() {
   const [quoteFormData, setQuoteFormData] = useState({
     customerName: '',
+    customerAddress: '',
     customerEmail: '',
     customerPhone: '',
     customerBudget: '',
@@ -106,7 +107,11 @@ export default function QuoteForm() {
           <input className="w-full px-2 rounded-sm" type="text" placeholder="Name" name="customerName" value={quoteFormData.customerName} onChange={handleChange} required />
         </div>
         <div className="w-full mb-3">
-          <label className="w-full">Email Address: <span className="text-red-500">*</span></label>
+          <label className="w-full">Address:</label>
+          <input className="w-full px-2 rounded-sm" type="text" placeholder="Address" name="customerAddress" value={quoteFormData.customerAddress} onChange={handleChange} />
+        </div>
+        <div className="w-full mb-3">
+          <label className="w-full">Email: <span className="text-red-500">*</span></label>
           <input className="w-full px-2 rounded-sm" type="email" placeholder="Email" name="customerEmail" value={quoteFormData.customerEmail} onChange={handleChange} required />
         </div>
         <div className="w-full mb-3">
