@@ -234,7 +234,7 @@ export default function Home() {
         <h1 className="font-semibold text-2xl mb-2">Ascend Irrigation & Landscaping</h1>
 
         <div className="flex items-center justify-center mb-4">
-          <a href="https://www.instagram.com/ascend_landscaping/" target="_blank">
+          <a href="https://www.facebook.com/profile.php?id=100092322747572&mibextid=LQQJ4d" target="_blank">
             <Image
               src={fbIcon}
               alt=""
