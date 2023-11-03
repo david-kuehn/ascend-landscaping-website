@@ -34,7 +34,7 @@ export default function AreaMap() {
 
   return (
     <div>
-      <div ref={mapContainer} className="map-container" />
+      <div ref={mapContainer} className="w-full h-[240px] sm:h-[480px]" />
     </div>
   )
 }

@@ -8,7 +8,7 @@ import ilcaImage from "../../public/certifications/ilca.png";
 
 export default function Certifications() {
   return (
-    <div className="flex items-center justify-center gap-1 pb-4 px-2">
+    <div className="flex items-center justify-center sm:justify-between gap-1 pb-4 sm:px-32 px-2">
       <Image
         src={abpaImage}
         alt=""

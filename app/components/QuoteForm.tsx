@@ -98,7 +98,7 @@ export default function QuoteForm() {
   };
 
   return (
-    <div className="text-black font-serif bg-gray-300 w-5/6 lg:w-1/2 px-7 md:px-16 lg:px-20 xl:px-24 py-5 rounded-md">
+    <div className="text-black font-serif bg-gray-300 w-5/6 lg:w-1/2 px-7 sm:px-12 md:px-20 lg:px-24 py-5 rounded-md">
       <form onSubmit={handleSubmit}>
         <h1 className="text-3xl text-center font-semibold mb-2">Get a Free Estimate!</h1>
 

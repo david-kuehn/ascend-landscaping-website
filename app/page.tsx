@@ -52,7 +52,7 @@ const servicePhotoMap = {
   "Landscaping": {
     image: homePageHero.src,
     pageUrl: "/landscaping",
-    blurb: "We take pride in crafting outdoor spaces that reflect your unique style and vision. From design to maintenance, our dedicated team is committed to turning your dreams into a vibrant reality. Let's create a picturesque landscape you'll love coming home to.",
+    blurb: "We take pride in crafting outdoor spaces that reflect your unique style and vision. From design to maintenance, our dedicated and experienced team is committed to turning your dreams into a vibrant reality. Let's create a picturesque landscape you'll love coming home to.",
   },
   "Hardscaping": {
     image: hardscapingBg.src,
@@ -76,7 +76,7 @@ export default function Home() {
             }}
           >
             <div
-              className="flex-1 flex gap-3 flex-col items-center justify-center w-full"
+              className="flex-1 flex gap-5 sm:gap-8 flex-col items-center justify-center w-full"
               style={{
                 backdropFilter: "blur(1px) brightness(70%)",
                 WebkitBackdropFilter: "blur(1px) brightness(70%)",
@@ -85,11 +85,11 @@ export default function Home() {
               <Image
                 src={ascendLogo}
                 alt=""
-                className="ml-4 w-64 sm:w-96"
+                className="ml-4 w-72 sm:w-96"
               />
 
-              <div className="grid grid-cols-1 grid-rows-3 gap-2 text-xl sm:text-3xl text-center sm:text-left">
-                <span><a href="/irrigation">💦 Irrigation</a></span>
+              <div className="grid sm:grid-cols-3 sm:grid-rows-1 grid-cols-1 grid-rows-3 gap-2 sm:gap-5 text-2xl text-center sm:text-left">
+                <span className="sm:justify-self-end"><a href="/irrigation">💦 Irrigation</a></span>
                 <span><a href="/landscaping">🌳 Landscaping</a></span>
                 <span><a href="/hardscaping">🧱 Hardscaping</a></span>
               </div>
@@ -97,8 +97,8 @@ export default function Home() {
           </div>
 
           <div className="text-center text-black flex flex-col items-center justify-start pt-5">
-            <h1 className="font-medium text-2xl">Crafting beautiful outdoor spaces for your Chicagoland home!</h1>
-            <p className="text-black leading-snug text-center w-3/4 sm:w-3/5 max-w-[50rem] mt-2 mb-6 sm:my-9">
+            <h1 className="font-medium text-2xl sm:text-3xl">Crafting beautiful outdoor spaces for your Chicagoland home!</h1>
+            <p className="text-black sm:text-lg leading-tight text-center w-3/4 sm:w-3/5 max-w-[50rem] sm:mt-3 mt-2 mb-6">
             Welcome to Ascend Irrigation and Landscaping! As a family-owned company with <strong>over 15 years of experience</strong>, we take immense pride in providing top-notch services in all aspects of <strong>irrigation and landscaping</strong>. Our dedicated team of experts is committed to transforming your outdoor spaces into breathtaking havens that truly reflect your vision and style. Whether you&apos;re looking to enhance the beauty of your <strong>residential property</strong> or seeking professional solutions for your <strong>commercial space</strong>, we have the knowledge, skills, and passion to exceed your expectations. From designing and installing <strong>efficient irrigation systems</strong> to creating <strong>stunning landscapes</strong> that stand the test of time, we are here to bring your dreams to life. Join us on this journey and let us help you ascend to new heights of outdoor <strong>beauty and functionality</strong>.
             </p>
           </div>
@@ -116,7 +116,7 @@ export default function Home() {
         { Object.entries(servicePhotoMap).map(([key, value]) => 
           <a key={key} href={value.pageUrl}>
             <div
-              className="flex overflow-hidden h-60 sm:h-60 md:h-80 rounded-xl"
+              className="flex overflow-hidden h-60 md:h-80 rounded-xl"
               style={{
                 backgroundImage: `url(${value.image})`,
                 backgroundSize: "cover",
@@ -126,7 +126,7 @@ export default function Home() {
               <div className="flex-1 flex flex-col items-center justify-end service-gradient-container">
                 <div className="w-full py-2 px-3">
                   <span className="pt-2 text-[1.75rem] italic font-semibold tracking-wider">{key}</span>
-                  <p className="text-sm mt-1 leading-tight text-neutral-100">{value.blurb}</p>
+                  <p className="text-sm sm:text-xs md:text-sm mt-1 leading-tight text-neutral-100">{value.blurb}</p>
                 </div>
               </div>
             </div>
@@ -153,15 +153,15 @@ export default function Home() {
       <div className="w-full flex flex-col items-center justify-start py-6 md:pt-8 md:pb-12 bg-[#1b281b] text-center">
         <h2 className="font-medium text-3xl">Areas We Service</h2>
 
-        <div className="w-full h-60 my-5">
+        <div className="w-full h-60 sm:h-[30rem] my-5">
           <AreaMap />
         </div>
 
-        <p className="w-3/4">
+        <p className="w-3/4 sm:w-1/2">
         We&apos;re proud to service the Chicagoland area, including the Northwestern, Western, and Southwestern suburbs!<br />Cities that we service include:
         </p>
 
-        <ul className="w-3/4 list-disc grid grid-cols-3 justify-items-center mt-3 text-sm font-light">
+        <ul className="w-3/4 sm:w-1/2 list-disc grid grid-cols-3 justify-items-center mt-3 text-sm font-light">
           <li>West Chicago</li>
           <li>Winfield</li>
           <li>Carol Stream</li>
@@ -193,29 +193,37 @@ export default function Home() {
       </div>
 
       {/* 3D Design Section */}
-      <div className="w-full flex flex-col items-center text-center py-6 bg-white text-black font-serif">
+      <div className="w-full flex flex-col items-center text-center py-6 bg-white text-black font-serif sm:px-4 lg:px-24 xl:px-32">
         <h2 className="font-medium text-3xl mb-2">3D Design</h2>
 
         <p className="w-3/4 mb-2">
         Our unique 3D Rendering design process ensures that you get the best results for your outdoor project!
         </p>
-        <p className="mb-3">We turn your <strong>custom, personalized</strong> 3D render...</p>
-        <Image
-          src={renderImage}
-          alt=""
-        />
-        <p className="my-3">...into the <strong>exact</strong> results you have in mind!</p>
-        <div className="overflow-hidden w-full h-56">
-          <Image
-            src={realityRenderImage}
-            alt=""
-          />
+        <div className="sm:grid sm:grid-cols-2 sm:grid-rows-1">
+          <div className="flex flex-col justify-center items-center">
+            <p className="my-3">We turn your <strong>custom, personalized</strong> 3D render...</p>
+            <div className="w-full px-8 sm:h-full overflow-hidden">
+              <Image
+                src={renderImage}
+                alt=""
+              />
+            </div>
+          </div>
+          <div className="flex flex-col justify-center items-center">
+            <p className="my-3">...into the <strong>exact</strong> results you have in mind!</p>
+            <div className="overflow-hidden w-full px-8 sm:h-full">
+              <Image
+                src={realityRenderImage}
+                alt=""
+              />
+            </div>
+          </div>
         </div>
-        <p className="mt-3 w-3/4">Our team of experts will design a space for you to ensure that it&apos;s up to your standards <strong>before</strong> we bring it into reality!</p>
+        <p className="mt-4 sm:mt-8 w-3/4">Our team of experts will design a space for you to ensure that it&apos;s up to your standards <strong>before</strong> we bring it into reality!</p>
       </div>
 
       {/* Testimonials Section */}
-      <div className="py-6 text-white w-full text-center bg-[#1b281b]">
+      <div className="pt-6 pb-10 text-white w-full text-center bg-[#1b281b]">
         <h2 className="font-medium text-3xl mb-6">Testimonials</h2>
 
         <TestimonialCarousel />
@@ -258,7 +266,7 @@ export default function Home() {
       <div className="mt-6 w-56 mx-auto text-black text-lg leading-none pb-12">
         <div className="flex items-center gap-2">
           <Image
-            className="block md:hidden h-4 w-4"
+            className="block h-4 w-4"
             src={locationIcon}
             alt=""
           />
@@ -267,7 +275,7 @@ export default function Home() {
 
         <a href="tel:630-639-8089" className="mt-2 flex items-center gap-2">
           <Image
-            className="block md:hidden h-4 w-4"
+            className="block h-4 w-4"
             src={phoneIcon}
             alt=""
           />
@@ -276,7 +284,7 @@ export default function Home() {
 
         <a href="mailto:ascend.landscaping1@gmail.com" className="mt-2 flex items-center gap-2">
           <Image
-            className="block md:hidden h-4 w-4"
+            className="block h-4 w-4"
             src={emailIcon}
             alt=""
           />
