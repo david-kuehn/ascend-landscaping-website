@@ -4,40 +4,22 @@ export interface EstimateDetails {
   customerEmail: string;
   customerPhone: string;
   customerBudget: string;
-  interestedServices: { irrigation: string[], landscaping: string[], hardscaping: string[], other: string }
+  interestedServices: { irrigation: string[], other: string }
 }
 
 const serviceKeyToPrettyStringMap = {
+  newInstallation: "New Installation",
   springActivation: "Spring Start Ups / Activation",
   systemMaintenance: "System Maintenance",
   repairs: "Repairs",
   winterization: "Shut Downs / Winterization",
   backflowTesting: "Backflow Testing",
   rpzCertification: "RPZ Certification",
-  springFallCleanUp: "Spring/Fall Clean Up",
-  planting: "Planting",
-  decorativeStone: "Decorative Stone",
-  mulching: "Mulching",
-  bushRemoval: "Bush Removal",
-  patio: "Patio",
-  walkway: "Walkway",
-  retainingWall: "Retaining Wall",
-  steps: "Steps",
-  firepits: "Firepits",
-  pavilionGazebo: "Pavilion / Gazebo",
   other: "Other Services (customer did not specify)",
 }
 
 export function buildEmailBody(customerRequestDetails: EstimateDetails) {
   const irrigationServicesHtmlList = customerRequestDetails.interestedServices.irrigation.map((service: string) => {
-    return `<li>${serviceKeyToPrettyStringMap[service as keyof typeof serviceKeyToPrettyStringMap]}</li>`;
-  }).join('\n');
-
-  const landscapingServicesHtmlList = customerRequestDetails.interestedServices.landscaping.map((service: string) => {
-    return `<li>${serviceKeyToPrettyStringMap[service as keyof typeof serviceKeyToPrettyStringMap]}</li>`;
-  }).join('\n');
-
-  const hardscapingServicesHtmlList = customerRequestDetails.interestedServices.hardscaping.map((service: string) => {
     return `<li>${serviceKeyToPrettyStringMap[service as keyof typeof serviceKeyToPrettyStringMap]}</li>`;
   }).join('\n');
 
@@ -66,16 +48,6 @@ export function buildEmailBody(customerRequestDetails: EstimateDetails) {
   <span style="font-weight: bold">Irrigation:</span>
   <ul>
     ${irrigationServicesHtmlList}
-  </ul>
-
-  <span style="font-weight: bold">Landscaping:</span>
-  <ul>
-    ${landscapingServicesHtmlList}
-  </ul>
-
-  <span style="font-weight: bold">Hardscaping:</span>
-  <ul>
-    ${hardscapingServicesHtmlList}
   </ul>
 
   <span style="font-weight: bold">Other:</span>

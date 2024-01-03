@@ -2,6 +2,7 @@ import Image, { StaticImageData } from "next/image";
 import homePageHero from "../public/home-page-hero-small.png";
 import ascendLogo from "../public/ascend-logo.png";
 import processDiagram from "../public/process.png";
+import processDiagramHorizontal from "../public/process-horizontal.png";
 import Carousel from "./components/Carousel";
 import FullHeightContainer from "./components/FullHeightContainer";
 import Navbar from "./components/Navbar";
@@ -35,9 +36,6 @@ import carouselImage17 from "../public/carousel-images/homepage/carousel-00017.p
 import carouselImage18 from "../public/carousel-images/homepage/carousel-00018.png";
 
 import irrigationBg from "../public/irrigation-bg.png";
-import hardscapingBg from "../public/hardscaping-bg.png";
-import renderImage from "../public/3d-rendering/render.png";
-import realityRenderImage from "../public/3d-rendering/real.jpg";
 import Certifications from "./components/Certifications";
 
 const homePageCarouselImages: StaticImageData[] = [carouselImage1, carouselImage2, carouselImage3, carouselImage4, carouselImage5, carouselImage6, carouselImage7, carouselImage8, 
@@ -49,16 +47,6 @@ const servicePhotoMap = {
     pageUrl: "/irrigation",
     blurb: "Discover our top-notch irrigation services, tailored to keep your garden thriving and radiant. We specialize in efficient sprinkler system installations, timely maintenance, and swift repairs, ensuring your plants receive the perfect drink. Let us make your garden flourish with our expertise and care!",
   },
-  "Landscaping": {
-    image: homePageHero.src,
-    pageUrl: "/landscaping",
-    blurb: "We take pride in crafting outdoor spaces that reflect your unique style and vision. From design to maintenance, our dedicated and experienced team is committed to turning your dreams into a vibrant reality. Let's create a picturesque landscape you'll love coming home to.",
-  },
-  "Hardscaping": {
-    image: hardscapingBg.src,
-    pageUrl: "/hardscaping",
-    blurb: "We specialize in crafting durable, elegant outdoor features, from intricate pathways to inviting patios. Our team blends creativity and expertise to bring your hardscaping visions to life, adding functionality and beauty to your outdoor oasis. Explore the possibilities with us today!",
-  }
 }
 
 export default function Home() {
@@ -71,15 +59,15 @@ export default function Home() {
           <div
             className="flex h-[55vh]"
             style={{
-              backgroundImage: `url(${homePageHero.src})`,
+              backgroundImage: `url(${irrigationBg.src})`,
               backgroundSize: "cover",
             }}
           >
             <div
               className="flex-1 flex gap-5 sm:gap-8 flex-col items-center justify-center w-full"
               style={{
-                backdropFilter: "blur(1px) brightness(70%)",
-                WebkitBackdropFilter: "blur(1px) brightness(70%)",
+                backdropFilter: "blur(0px) brightness(70%)",
+                WebkitBackdropFilter: "blur(0px) brightness(70%)",
               }}
             >
               <Image
@@ -87,19 +75,13 @@ export default function Home() {
                 alt=""
                 className="ml-4 w-72 sm:w-96"
               />
-
-              <div className="grid sm:grid-cols-3 sm:grid-rows-1 grid-cols-1 grid-rows-3 gap-2 sm:gap-5 text-2xl text-center sm:text-left">
-                <span className="sm:justify-self-end"><a href="/irrigation">💦 Irrigation</a></span>
-                <span><a href="/landscaping">🌳 Landscaping</a></span>
-                <span><a href="/hardscaping">🧱 Hardscaping</a></span>
-              </div>
             </div>
           </div>
 
           <div className="text-center text-black flex flex-col items-center justify-start pt-5">
-            <h1 className="font-medium text-2xl sm:text-3xl">Crafting beautiful outdoor spaces for your Chicagoland home!</h1>
+            <h1 className="font-medium text-2xl sm:text-3xl">Reliable, high-quality irrigation systems for your Chicagoland home!</h1>
             <p className="text-black sm:text-lg leading-tight text-center w-3/4 sm:w-3/5 max-w-[50rem] sm:mt-3 mt-2 mb-6">
-            Welcome to Ascend Irrigation and Landscaping! As a family-owned company with <strong>over 15 years of experience</strong>, we take immense pride in providing top-notch services in all aspects of <strong>irrigation and landscaping</strong>. Our dedicated team of experts is committed to transforming your outdoor spaces into breathtaking havens that truly reflect your vision and style. Whether you&apos;re looking to enhance the beauty of your <strong>residential property</strong> or seeking professional solutions for your <strong>commercial space</strong>, we have the knowledge, skills, and passion to exceed your expectations. From designing and installing <strong>efficient irrigation systems</strong> to creating <strong>stunning landscapes</strong> that stand the test of time, we are here to bring your dreams to life. Join us on this journey and let us help you ascend to new heights of outdoor <strong>beauty and functionality</strong>.
+            Welcome to Ascend Irrigation! As a family-owned company specializing in irrigation, we boast <strong>over 15 years of dedicated expertise</strong> in delivering exceptional irrigation services. Our <strong>committed team of experts</strong> is devoted to elevating your outdoor spaces by focusing on the <strong>creation and maintenance of efficient, high-quality irrigation systems</strong>. Whether you&apos;re a homeowner aiming to enhance your property&apos;s functionality or a business seeking <strong>professional irrigation solutions</strong>, our knowledge, skills, and dedication will ensure that your irrigation needs are met. From designing and installing cutting-edge irrigation systems to ensuring their lasting performance, we are here to turn your vision into reality. Come journey with us and ascend to new heights of outdoor efficiency and excellence!
             </p>
           </div>
         </div>
@@ -112,7 +94,6 @@ export default function Home() {
       <div className="w-full pt-6 pb-8 md:pt-8 md:pb-12 px-8 bg-[#1b281b] text-center">
         <h2 className="font-medium text-3xl mb-6">Our Services</h2>
 
-        <div className="grid grid-cols-1 grid-rows-3 sm:grid-cols-3 sm:grid-rows-1 gap-5">
         { Object.entries(servicePhotoMap).map(([key, value]) => 
           <a key={key} href={value.pageUrl}>
             <div
@@ -123,22 +104,21 @@ export default function Home() {
                 backgroundPositionY: "-40px",
               }}
             >
-              <div className="flex-1 flex flex-col items-center justify-end service-gradient-container">
-                <div className="w-full py-2 px-3">
+              <div className="flex-1 flex flex-col items-center justify-end sm:pb-4 md:pb-6 lg:pb-8 service-gradient-container">
+                <div className="w-full py-2 px-3 sm:w-[75%] md:w-[65%]">
                   <span className="pt-2 text-[1.75rem] italic font-semibold tracking-wider">{key}</span>
-                  <p className="text-sm sm:text-xs md:text-sm mt-1 leading-tight text-neutral-100">{value.blurb}</p>
+                  <p className="text-sm sm:text-base md:text-lg mt-1 leading-tight text-neutral-100">{value.blurb}</p>
                 </div>
               </div>
             </div>
           </a>
         )}
-        </div>
       </div>
 
       {/* Our Process section */}
       <div className="flex flex-col items-center w-full pt-6 pb-8 md:pt-8 md:pb-12 px-8 text-black text-center">
         <h2 className="font-medium text-3xl mb-2">Our Process</h2>
-        <p className="mx-5 mb-6 leading-snug">
+        <p className="mx-5 md:mx-0 md:w-2/3 lg:w-1/2 lg:text-lg mb-8 leading-snug">
         We ensure that our work is tailored to your specific needs by following an <strong>industry-standard, modern approach to landscaping services</strong>. Just tell us what you’re looking for, and we’ll design and construct an outdoor space that suits your needs!
         </p>
 
@@ -146,7 +126,16 @@ export default function Home() {
           src={processDiagram}
           alt=""
           width={150}
+          className="sm:hidden block"
         />
+        <div className="lg:w-[60%] hidden sm:flex pb-6">
+          <Image
+            src={processDiagramHorizontal}
+            alt=""
+            height={130}
+            className="flex-1"
+          />
+        </div>
       </div>
 
       {/* Areas of Service Section */}
@@ -192,38 +181,8 @@ export default function Home() {
         <p className="mt-4">and more!</p>
       </div>
 
-      {/* 3D Design Section */}
-      <div className="w-full flex flex-col items-center text-center py-6 bg-white text-black font-serif sm:px-4 lg:px-24 xl:px-32">
-        <h2 className="font-medium text-3xl mb-2">3D Design</h2>
-
-        <p className="w-3/4 mb-2">
-        Our unique 3D Rendering design process ensures that you get the best results for your outdoor project!
-        </p>
-        <div className="sm:grid sm:grid-cols-2 sm:grid-rows-1">
-          <div className="flex flex-col justify-center items-center">
-            <p className="my-3">We turn your <strong>custom, personalized</strong> 3D render...</p>
-            <div className="w-full px-8 sm:h-full overflow-hidden">
-              <Image
-                src={renderImage}
-                alt=""
-              />
-            </div>
-          </div>
-          <div className="flex flex-col justify-center items-center">
-            <p className="my-3">...into the <strong>exact</strong> results you have in mind!</p>
-            <div className="overflow-hidden w-full px-8 sm:h-full">
-              <Image
-                src={realityRenderImage}
-                alt=""
-              />
-            </div>
-          </div>
-        </div>
-        <p className="mt-4 sm:mt-8 w-3/4">Our team of experts will design a space for you to ensure that it&apos;s up to your standards <strong>before</strong> we bring it into reality!</p>
-      </div>
-
       {/* Testimonials Section */}
-      <div className="pt-6 pb-10 text-white w-full text-center bg-[#1b281b]">
+      <div className="pt-6 pb-10 text-black w-full text-center">
         <h2 className="font-medium text-3xl mb-6">Testimonials</h2>
 
         <TestimonialCarousel />
