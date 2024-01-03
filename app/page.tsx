@@ -79,7 +79,7 @@ export default function Home() {
           </div>
 
           <div className="text-center text-black flex flex-col items-center justify-start pt-5">
-            <h1 className="font-medium text-2xl sm:text-3xl">Reliable, high-quality irrigation systems for your Chicagoland home!</h1>
+            <h1 className="font-medium text-2xl sm:text-3xl mx-3">Reliable, high-quality irrigation systems for your Chicagoland home!</h1>
             <p className="text-black sm:text-lg leading-tight text-center w-3/4 sm:w-3/5 max-w-[50rem] sm:mt-3 mt-2 mb-6">
             Welcome to Ascend Irrigation! As a family-owned company specializing in irrigation, we boast <strong>over 15 years of dedicated expertise</strong> in delivering exceptional irrigation services. Our <strong>committed team of experts</strong> is devoted to elevating your outdoor spaces by focusing on the <strong>creation and maintenance of efficient, high-quality irrigation systems</strong>. Whether you&apos;re a homeowner aiming to enhance your property&apos;s functionality or a business seeking <strong>professional irrigation solutions</strong>, our knowledge, skills, and dedication will ensure that your irrigation needs are met. From designing and installing cutting-edge irrigation systems to ensuring their lasting performance, we are here to turn your vision into reality. Come journey with us and ascend to new heights of outdoor efficiency and excellence!
             </p>
@@ -119,7 +119,7 @@ export default function Home() {
       <div className="flex flex-col items-center w-full pt-6 pb-8 md:pt-8 md:pb-12 px-8 text-black text-center">
         <h2 className="font-medium text-3xl mb-2">Our Process</h2>
         <p className="mx-5 md:mx-0 md:w-2/3 lg:w-1/2 lg:text-lg mb-8 leading-snug">
-        We ensure that our work is tailored to your specific needs by following an <strong>industry-standard, modern approach to landscaping services</strong>. Just tell us what you’re looking for, and we’ll design and construct an outdoor space that suits your needs!
+        We ensure that our work is tailored to your specific needs by following an <strong>industry-standard, modern approach to irrigation services</strong>. Just tell us what you’re looking for, and we’ll design and install an irrigation system that suits your needs!
         </p>
 
         <Image
@@ -128,11 +128,10 @@ export default function Home() {
           width={150}
           className="sm:hidden block"
         />
-        <div className="lg:w-[60%] hidden sm:flex pb-6">
+        <div className="lg:w-[50%] hidden sm:flex lg:pt-6 pb-6">
           <Image
             src={processDiagramHorizontal}
             alt=""
-            height={130}
             className="flex-1"
           />
         </div>
@@ -146,11 +145,11 @@ export default function Home() {
           <AreaMap />
         </div>
 
-        <p className="w-3/4 sm:w-1/2">
+        <p className="w-3/4 sm:w-1/2 lg:text-lg">
         We&apos;re proud to service the Chicagoland area, including the Northwestern, Western, and Southwestern suburbs!<br />Cities that we service include:
         </p>
 
-        <ul className="w-3/4 sm:w-1/2 list-disc grid grid-cols-3 justify-items-center mt-3 text-sm font-light">
+        <ul className="w-3/4 sm:w-1/2 list-disc grid grid-cols-3 justify-items-center mt-3 text-sm lg:text-xl font-medium">
           <li>West Chicago</li>
           <li>Winfield</li>
           <li>Carol Stream</li>
@@ -178,7 +177,7 @@ export default function Home() {
           <li className="col-span-3 self-center">Oak Brook</li>
         </ul>
 
-        <p className="mt-4">and more!</p>
+        <p className="mt-4 lg:text-xl italic">and more!</p>
       </div>
 
       {/* Testimonials Section */}
@@ -198,7 +197,7 @@ export default function Home() {
       </div>
 
       <div className="w-full flex flex-col items-center justify-center text-black leading-none">
-        <h1 className="font-semibold text-2xl mb-2">Ascend Irrigation & Landscaping</h1>
+        <h1 className="font-semibold text-2xl mb-2">Ascend Irrigation</h1>
 
         <div className="flex items-center justify-center mb-4">
           <a href="https://www.facebook.com/profile.php?id=100092322747572&mibextid=LQQJ4d" target="_blank">

@@ -19,7 +19,7 @@ export default function Navbar(props: { currentPage: number }) {
         <a href="/">
           <div className="font-serif text-black flex flex-col items-center justify-center hover:scale-105 transition-all">
               <span className="font-semibold text-4xl">ASCEND</span>
-              <span className="text-xl font-medium leading-none">Landscaping</span>
+              <span className="text-xl font-medium leading-none">Irrigation</span>
           </div>
         </a>
 

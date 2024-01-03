@@ -35,7 +35,7 @@ export default function QuoteForm() {
     // Add your form submission logic here
 
     let selectedIrrigationKeys: string[] = [];
-    Object.keys(irrigationServices).forEach((key, idx) => {
+    Object.keys(irrigationServices).forEach((key) => {
       if (irrigationServices[key as keyof typeof irrigationServices] == true) {
         selectedIrrigationKeys.push(key);
       }
@@ -64,7 +64,7 @@ export default function QuoteForm() {
   };
 
   return (
-    <div className="text-black font-serif bg-gray-300 w-5/6 lg:w-1/2 px-7 sm:px-12 md:px-20 lg:px-24 py-5 rounded-md">
+    <div className="text-black font-serif bg-gray-300 w-5/6 lg:w-1/2 px-4 sm:px-12 md:px-20 lg:px-24 py-5 rounded-md">
       <form onSubmit={handleSubmit}>
         <h1 className="text-3xl text-center font-semibold mb-2">Get a Free Estimate!</h1>
 
@@ -86,45 +86,63 @@ export default function QuoteForm() {
         </div>
 
         <h2 className="font-bold text-xl mt-6">Interested in:</h2>
-        <div className="grid gap-x-3 gap-y-3 grid-cols-2 w-full leading-none text-sm">
-          <div className="mt-2">
-            <h3 className="font-semibold leading-none text-base">Irrigation</h3>
+        <div className="grid gap-x-3 gap-y-3 grid-cols-2 w-full leading-none">
+          <div className="mt-2 grid grid-cols-1 gap-y-1">
+            <h3 className="font-semibold leading-none text-lg">Irrigation</h3>
 
             <li className="grid grid-cols-formitem items-center mt-1">
               <input type="checkbox" className="w-4" name="irrigationServices.newInstallation" checked={irrigationServices.newInstallation} onChange={() => setIrrigationServices({...irrigationServices, newInstallation: !irrigationServices.newInstallation})} />
-              <span className="mt-1">New Installation</span>
+              <span className="">New Installation</span>
             </li>
+
+            { irrigationServices.newInstallation ? 
+            <div className="ml-5">
+              <span className="text-xs italic text-gray-900">Select an installation tier:</span>
+              <li className="grid grid-cols-formitem items-center mt-1">
+                <input type="checkbox" className="w-4" />
+                <span>Premium Installation</span>
+              </li>
+              <li className="grid grid-cols-formitem items-center mt-1">
+                <input type="checkbox" className="w-4" />
+                <span>Basic Installation</span>
+              </li>
+            </div>
+            :
+            <>
+            </>
+            }
+
             <li className="grid grid-cols-formitem items-center mt-1">
               <input type="checkbox" className="w-4" name="irrigationServices.springActivation" checked={irrigationServices.springActivation} onChange={() => setIrrigationServices({...irrigationServices, springActivation: !irrigationServices.springActivation})} />
-              <span className="mt-1">Spring Start Ups / Activation</span>
+              <span>Spring Start Ups / Activation</span>
             </li>
             <li className="grid grid-cols-formitem items-center mt-1">
               <input type="checkbox" className="mr-2 w-4" name="irrigationServices.systemMaintenance" checked={irrigationServices.systemMaintenance} onChange={() => setIrrigationServices({...irrigationServices, systemMaintenance: !irrigationServices.systemMaintenance})} />
-              <span className="mt-1">Maintenance</span>
+              <span>Maintenance</span>
             </li>
             <li className="grid grid-cols-formitem items-center mt-1">
               <input type="checkbox" className="mr-2 w-4" name="irrigationServices.repairs" checked={irrigationServices.repairs} onChange={() => setIrrigationServices({...irrigationServices, repairs: !irrigationServices.repairs})} />
-              <span className="mt-1">Repairs</span>
+              <span>Repairs</span>
             </li>
             <li className="grid grid-cols-formitem items-center mt-1">
               <input type="checkbox" className="mr-2 w-4" name="irrigationServices.winterization" checked={irrigationServices.winterization} onChange={() => setIrrigationServices({...irrigationServices, winterization: !irrigationServices.winterization})} />
-              <span className="mt-1">Shut Downs / Winterization</span>
+              <span>Shut Downs / Winterization</span>
             </li>
             <li className="grid grid-cols-formitem items-center mt-1">
               <input type="checkbox" className="mr-2 w-4" name="irrigationServices.backflowTesting" checked={irrigationServices.backflowTesting} onChange={() => setIrrigationServices({...irrigationServices, backflowTesting: !irrigationServices.backflowTesting})} />
-              <span className="mt-1">Backflow Testing</span>
+              <span>Backflow Testing</span>
             </li>
             <li className="grid grid-cols-formitem items-center mt-1">
               <input type="checkbox" className="mr-2 w-4" name="irrigationServices.rpzCertification" checked={irrigationServices.rpzCertification} onChange={() => setIrrigationServices({...irrigationServices, rpzCertification: !irrigationServices.rpzCertification})} />
-              <span className="mt-1">RPZ Certification</span>
+              <span>RPZ Certification</span>
             </li>
             <li className="grid grid-cols-formitem items-center mt-1">
               <input type="checkbox" className="mr-2 w-4" name="irrigationServices.other" checked={irrigationServices.other} onChange={() => setIrrigationServices({...irrigationServices, other: !irrigationServices.other})} />
-              <span className="mt-1">Other</span>
+              <span>Other</span>
             </li>
           </div>
           <div className="mt-2 flex flex-col">
-            <h3 className="font-semibold leading-none text-base">Something else:</h3>
+            <h3 className="font-semibold leading-none text-lg">Something else:</h3>
 
             <textarea placeholder="What're you looking for?" className="w-full flex-1 mt-1 p-1 rounded-sm" value={otherService} onChange={(e) => setOtherService(e.target.value)} />
           </div>
@@ -134,35 +152,35 @@ export default function QuoteForm() {
         <div className="grid gap-x-2 grid-cols-2 w-full leading-none">
           <li className="grid grid-cols-formitem items-center mt-1">
             <input type="radio" className="mr-1 w-4" name="customerBudget" onChange={() => setQuoteFormData({...quoteFormData, customerBudget: "$0-2,000"})} />
-            <span className="mt-1">$0-$2,000</span>
+            <span>$0-$2,000</span>
           </li>
           <li className="grid grid-cols-formitem items-center mt-1">
             <input type="radio" className="mr-1 w-4" name="customerBudget" onChange={() => setQuoteFormData({...quoteFormData, customerBudget: "$2,000-$8,000"})} />
-            <span className="mt-1">$2,000-$8,000</span>
+            <span>$2,000-$8,000</span>
           </li>
           <li className="grid grid-cols-formitem items-center mt-1">
             <input type="radio" className="mr-1 w-4" name="customerBudget" onChange={() => setQuoteFormData({...quoteFormData, customerBudget: "$8,000-$15,000"})} />
-            <span className="mt-1">$8,000-$15,000</span>
+            <span>$8,000-$15,000</span>
           </li>
           <li className="grid grid-cols-formitem items-center mt-1">
             <input type="radio" className="mr-1 w-4" name="customerBudget" onChange={() => setQuoteFormData({...quoteFormData, customerBudget: "$15,000-$30,000"})} />
-            <span className="mt-1">$15,000-$30,000</span>
+            <span>$15,000-$30,000</span>
           </li>
           <li className="grid grid-cols-formitem items-center mt-1">
             <input type="radio" className="mr-1 w-4" name="customerBudget" onChange={() => setQuoteFormData({...quoteFormData, customerBudget: "$30,000-$50,000"})} />
-            <span className="mt-1">$30,000-$50,000</span>
+            <span>$30,000-$50,000</span>
           </li>
           <li className="grid grid-cols-formitem items-center mt-1">
             <input type="radio" className="mr-1 w-4" name="customerBudget" onChange={() => setQuoteFormData({...quoteFormData, customerBudget: "$50,000-$80,000"})} />
-            <span className="mt-1">$50,000-$80,000</span>
+            <span>$50,000-$80,000</span>
           </li>
           <li className="grid grid-cols-formitem items-center mt-1">
             <input type="radio" className="mr-1 w-4" name="customerBudget" onChange={() => setQuoteFormData({...quoteFormData, customerBudget: "$80,000-$100,000"})} />
-            <span className="mt-1">$80,000-$100,000</span>
+            <span>$80,000-$100,000</span>
           </li>
           <li className="grid grid-cols-formitem items-center mt-1">
             <input type="radio" className="mr-1 w-4" name="customerBudget" onChange={() => setQuoteFormData({...quoteFormData, customerBudget: "$100,000+"})} />
-            <span className="mt-1">$100,000+</span>
+            <span>$100,000+</span>
           </li>
         </div>
 

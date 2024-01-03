@@ -21,7 +21,7 @@ module.exports = {
         wfa: '-webkit-fill-available',
       },
       gridTemplateColumns: {
-        formitem: '17% 1fr',
+        formitem: '22px 1fr',
       }
     },
   },
