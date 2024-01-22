@@ -1,11 +1,21 @@
 import Image from "next/image";
 import phoneIcon from "../../public/phone_icon.png";
+import ascendLogo from "../../public/ascend-logo-v2.png";
 
 export default function Navbar(props: { currentPage: number }) {
   return (
-    <nav className="bg-white text-black font-serif w-full py-3 z-10">
-      <div className="w-full flex items-center justify-center">
-        <div className="absolute left-5 md:left-10 text-black font-serif text-2xl">
+    <nav className="fixed top-0 drop-shadow-md bg-white text-black font-serif w-full py-3 z-10">
+      <div className="mr-3 flex items-center justify-center">
+        <a href="/">
+          <Image
+            src={ascendLogo}
+            alt=""
+            className="h-16"
+            style={{objectFit: "contain"}}
+          />
+        </a>
+
+        <div className="absolute right-5 md:right-10 text-black font-serif text-2xl">
           <a href="tel:630-639-8089">
             <span className="hidden md:block">(630) 639-8089</span>
 
@@ -16,13 +26,6 @@ export default function Navbar(props: { currentPage: number }) {
             />
           </a>
         </div>
-        <a href="/">
-          <div className="font-serif text-black flex flex-col items-center justify-center hover:scale-105 transition-all">
-              <span className="font-semibold text-4xl">ASCEND</span>
-              <span className="text-xl font-medium leading-none">Irrigation</span>
-          </div>
-        </a>
-
       </div>
 
       {/*

@@ -49,7 +49,7 @@ export default function TestimonialCarousel() {
         </div>
       </div>
 
-      <div className="absolute translate-y-[-90px] w-full flex justify-between px-6 sm:px-16 md:px-40 lg:px-96">
+      <div className="absolute translate-y-[-90px] w-full flex justify-between px-6 sm:px-16 md:px-40 lg:px-[13rem]">
         <button className="embla__prev left-0 top-0" onClick={scrollPrev}>
           <Image
             src={arrowImg}

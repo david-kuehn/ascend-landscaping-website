@@ -52,34 +52,28 @@ const servicePhotoMap = {
 export default function Home() {
   return (
     <main className="font-serif">
+      <Navbar currentPage={0} />
       <FullHeightContainer>
-        <Navbar currentPage={0} />
-
         <div>
           <div
-            className="flex h-[55vh]"
+            className="flex h-[55vh] mt-10"
             style={{
               backgroundImage: `url(${irrigationBg.src})`,
               backgroundSize: "cover",
             }}
           >
             <div
-              className="flex-1 flex gap-5 sm:gap-8 flex-col items-center justify-center w-full"
+              className="text-center flex-1 flex gap-5 sm:gap-8 flex-col items-center justify-end w-full pb-10"
               style={{
                 backdropFilter: "blur(0px) brightness(70%)",
                 WebkitBackdropFilter: "blur(0px) brightness(70%)",
               }}
             >
-              <Image
-                src={ascendLogo}
-                alt=""
-                className="ml-4 w-64 sm:w-[30rem]"
-              />
+              <h1 className="font-semibold text-3xl sm:text-4xl mx-3">Reliable, high-quality irrigation systems for your Chicagoland home!</h1>
             </div>
           </div>
 
           <div className="text-center text-black flex flex-col items-center justify-start pt-5">
-            <h1 className="font-medium text-2xl sm:text-3xl mx-3">Reliable, high-quality irrigation systems for your Chicagoland home!</h1>
             <p className="text-black sm:text-lg leading-tight text-center w-3/4 sm:w-3/5 max-w-[50rem] sm:mt-3 mt-2 mb-6">
             Welcome to Ascend Irrigation! As a family-owned company specializing in irrigation, we boast <strong>over 15 years of dedicated expertise</strong> in delivering exceptional irrigation services. Our <strong>committed team of experts</strong> is devoted to elevating your outdoor spaces by focusing on the <strong>creation and maintenance of efficient, high-quality irrigation systems</strong>. Whether you&apos;re a homeowner aiming to enhance your property&apos;s functionality or a business seeking <strong>professional irrigation solutions</strong>, our knowledge, skills, and dedication will ensure that your irrigation needs are met. From designing and installing cutting-edge irrigation systems to ensuring their lasting performance, we are here to turn your vision into reality. Come journey with us and ascend to new heights of outdoor efficiency and excellence!
             </p>
