@@ -1,6 +1,6 @@
 import Image, { StaticImageData } from "next/image";
 import homePageHero from "../public/home-page-hero-small.png";
-import ascendLogo from "../public/ascend-logo.png";
+import ascendLogo from "../public/ascend-logo-v2.png";
 import processDiagram from "../public/process.png";
 import processDiagramHorizontal from "../public/process-horizontal.png";
 import Carousel from "./components/Carousel";
@@ -73,7 +73,7 @@ export default function Home() {
               <Image
                 src={ascendLogo}
                 alt=""
-                className="ml-4 w-72 sm:w-96"
+                className="ml-4 w-64 sm:w-[30rem]"
               />
             </div>
           </div>
