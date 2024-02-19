@@ -36,41 +36,69 @@ import carouselImage17 from "../public/carousel-images/homepage/carousel-00017.p
 import carouselImage18 from "../public/carousel-images/homepage/carousel-00018.png";
 
 import irrigationBg from "../public/irrigation-bg.png";
+import blurredHero from "../public/blurred-hero.png";
 import Certifications from "./components/Certifications";
+import PopupOverlay from "./components/PopupOverlay";
 
 const homePageCarouselImages: StaticImageData[] = [carouselImage1, carouselImage2, carouselImage3, carouselImage4, carouselImage5, carouselImage6, carouselImage7, carouselImage8, 
   carouselImage9, carouselImage10, carouselImage11, carouselImage12, carouselImage13, carouselImage14, carouselImage15, carouselImage16, carouselImage17, carouselImage18]
 
 const servicePhotoMap = {
-  "Irrigation": {
+  "Residential Sprinklers": {
     image: irrigationBg.src,
     pageUrl: "/irrigation",
     blurb: "Discover our top-notch irrigation services, tailored to keep your garden thriving and radiant. We specialize in efficient sprinkler system installations, timely maintenance, and swift repairs, ensuring your plants receive the perfect drink. Let us make your garden flourish with our expertise and care!",
   },
+  "Commercial Sprinklers": {
+    image: carouselImage12.src,
+    pageUrl: "/irrigation",
+    blurb: "Elevate your business landscape with our expert Commercial Landscaping services. From cutting-edge sprinkler installations to prompt maintenance and repairs, we ensure a vibrant and impressive outdoor space. Transform your commercial property with our dedicated expertise!",
+  },
+  "RPZ Testing": {
+    image: carouselImage12.src,
+    pageUrl: "/irrigation",
+    blurb: "Ensure the safety of your water supply with our top-tier RPZ Testing service. Our skilled team specializes in comprehensive backflow prevention testing, guaranteeing the integrity of your water system. Trust us to keep your water supply secure and compliant. Choose confidence, choose our RPZ Testing expertise!",
+  },
+  "Service / Repairs": {
+    image: carouselImage12.src,
+    pageUrl: "/irrigation",
+    blurb: "Revitalize your landscape with our reliable service and repairs. Our skilled team excels in efficient system repairs and maintenance, ensuring your irrigation operates at its best. From troubleshooting to proactive care, trust us to keep your landscape thriving. Choose excellence in Irrigation Service/Repairs - your garden deserves the best!",
+  },
+}
+
+const pricingSheet = {
+	"Inspection & Consultation": "$100-$150",
+  "Start Up & Activation": "$125-$275",
+  "Winterization": "$125-$275",
+  "Backflow Certification / RPZ Testing": "starting at $135",
+  "Full Season Package": "starting at $350",
 }
 
 export default function Home() {
   return (
     <main className="font-serif">
+			<PopupOverlay />
       <Navbar currentPage={0} />
       <FullHeightContainer>
-        <div>
           <div
-            className="flex h-[55vh] mt-10"
-            style={{
-              backgroundImage: `url(${irrigationBg.src})`,
-              backgroundSize: "cover",
-            }}
+            className="flex relative h-[65vh] mt-10"
           >
-            <div
-              className="text-center flex-1 flex gap-5 sm:gap-8 flex-col items-center justify-end w-full pb-10"
-              style={{
-                backdropFilter: "blur(0px) brightness(70%)",
-                WebkitBackdropFilter: "blur(0px) brightness(70%)",
-              }}
-            >
-              <h1 className="font-semibold text-3xl sm:text-4xl mx-3">Reliable, high-quality irrigation systems for your Chicagoland home!</h1>
-            </div>
+						<div className="absolute w-full h-full"
+							style={{
+								content: "",
+								backgroundImage: `url(${blurredHero.src})`,
+								backgroundSize: "cover",
+								backgroundPosition: "center",
+							}} />
+						<div className="relative flex-1 flex flex-col items-center justify-end gap-5 pb-12">
+							<h3 className="font-semibold text-2xl mx-3 text-ascendblue text-center">Call <a href="tel:630-639-8089">(630) 639-8089</a></h3>
+							<h1 className="font-bold text-4xl mx-3 text-ascendblue text-center">Ascend to greener, healthier lawns in 2024!</h1>
+							<h3 className="font-bold mx-3 text-ascendblue text-center">Installation | Service/Repairs | Backflow Testing</h3>
+							<div className="grid grid-cols-2 text-center gap-3 mt-5 font-semibold text-lg">
+								<a href="#quote-form"><div className="bg-ascendblue rounded-lg px-3 py-3 drop-shadow-xl">CONTACT FORM</div></a>
+								<a href="tel:630-639-8089"><div className="bg-ascendblue rounded-lg px-3 py-3 drop-shadow-xl">CALL NOW</div></a>
+							</div>
+						</div>
           </div>
 
           <div className="text-center text-black flex flex-col items-center justify-start pt-5">
@@ -78,16 +106,16 @@ export default function Home() {
             Welcome to Ascend Irrigation! As a family-owned company specializing in irrigation, we boast <strong>over 15 years of dedicated expertise</strong> in delivering exceptional irrigation services. Our <strong>committed team of experts</strong> is devoted to elevating your outdoor spaces by focusing on the <strong>creation and maintenance of efficient, high-quality irrigation systems</strong>. Whether you&apos;re a homeowner aiming to enhance your property&apos;s functionality or a business seeking <strong>professional irrigation solutions</strong>, our knowledge, skills, and dedication will ensure that your irrigation needs are met. From designing and installing cutting-edge irrigation systems to ensuring their lasting performance, we are here to turn your vision into reality. Come journey with us and ascend to new heights of outdoor efficiency and excellence!
             </p>
           </div>
-        </div>
       </FullHeightContainer>
 
       {/* Certifications section */}
       <Certifications />
 
       {/* Our Services section */}
-      <div className="w-full pt-6 pb-8 md:pt-8 md:pb-12 px-8 bg-[#1b281b] text-center">
+      <div className="w-full pt-6 pb-8 md:pt-8 md:pb-12 px-8 bg-[#002a38] text-center">
         <h2 className="font-medium text-3xl mb-6">Our Services</h2>
 
+				<div className="grid grid-cols-1 gap-3">
         { Object.entries(servicePhotoMap).map(([key, value]) => 
           <a key={key} href={value.pageUrl}>
             <div
@@ -100,14 +128,36 @@ export default function Home() {
             >
               <div className="flex-1 flex flex-col items-center justify-end sm:pb-4 md:pb-6 lg:pb-8 service-gradient-container">
                 <div className="w-full py-2 px-3 sm:w-[75%] md:w-[65%]">
-                  <span className="pt-2 text-[1.75rem] italic font-semibold tracking-wider">{key}</span>
+                  <span className="pt-2 text-[1.65rem] italic font-semibold tracking-wider">{key}</span>
                   <p className="text-sm sm:text-base md:text-lg mt-1 leading-tight text-neutral-100">{value.blurb}</p>
                 </div>
               </div>
             </div>
           </a>
         )}
+				</div>
       </div>
+
+			{/* Pricing section */}
+      <div className="flex flex-col items-center w-full pt-6 pb-8 md:pt-8 md:pb-12 px-8 text-black text-center">
+        <h2 className="font-medium text-3xl mb-4">Pricing</h2>
+				<div className="grid grid-cols-1 gap-3">
+				{ Object.entries(pricingSheet).map(([key, value]) => 
+					<div key={key}
+						className="h-32 rounded-xl overflow-clip items-center border-2 border-gray"
+						style={{
+							display: "grid",
+							gridTemplateRows: "2rem 1fr",
+						}}
+					>
+						<span className="font-medium">{key}</span>
+						<div className="bg-ascendblue h-full flex justify-center items-center px-3">
+							<span className="text-white text-4xl font-medium">{value}</span>
+						</div>
+					</div>
+				)}
+				</div>
+			</div>
 
       {/* Our Process section */}
       <div className="flex flex-col items-center w-full pt-6 pb-8 md:pt-8 md:pb-12 px-8 text-black text-center">
@@ -132,7 +182,7 @@ export default function Home() {
       </div>
 
       {/* Areas of Service Section */}
-      <div className="w-full flex flex-col items-center justify-start py-6 md:pt-8 md:pb-12 bg-[#1b281b] text-center">
+      <div className="w-full flex flex-col items-center justify-start py-6 md:pt-8 md:pb-12 bg-[#002a38] text-center">
         <h2 className="font-medium text-3xl">Areas We Service</h2>
 
         <div className="w-full h-60 sm:h-[30rem] my-5">
@@ -215,7 +265,7 @@ export default function Home() {
         <span>Saturday & Sunday 8am-5pm</span>
 
       </div>
-      <div className="mt-6 w-56 mx-auto text-black text-lg leading-none pb-12">
+      <div className="mt-6 w-full flex flex-col justify-center items-center text-black text-lg leading-none pb-12">
         <div className="flex items-center gap-2">
           <Image
             className="block h-4 w-4"

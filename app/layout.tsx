@@ -1,11 +1,18 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Yrsa } from 'next/font/google'
+import { Urbanist } from 'next/font/google'
 
 const yrsa = Yrsa({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-yrsa',
+});
+
+const urbanist = Urbanist({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-urbanist',
 });
 
 export const metadata: Metadata = {
@@ -20,6 +27,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+			<head>
+				<meta name="theme-color" content="#ffffff" />
+			</head>
       <link
         rel="icon"
         href="/icon.png"
@@ -27,7 +37,7 @@ export default function RootLayout({
         sizes="32x32"
       />
 
-      <body className={yrsa.variable}>{children}</body>
+      <body className={urbanist.variable}>{children}</body>
     </html>
   )
 }

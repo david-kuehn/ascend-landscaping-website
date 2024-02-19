@@ -15,14 +15,17 @@ module.exports = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       fontFamily: {
-        serif: ['var(--font-yrsa)'],
+        serif: ['var(--font-urbanist)'],
       },
       minHeight: {
         wfa: '-webkit-fill-available',
       },
       gridTemplateColumns: {
         formitem: '22px 1fr',
-      }
+      },
+			colors: {
+				ascendblue: "#45D1FF",
+			}
     },
   },
   plugins: [],
