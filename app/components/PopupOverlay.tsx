@@ -11,6 +11,11 @@ export default function PopupOverlay() {
 		document.body.style.overflow = "scroll";
 	}
 
+	function scrollToForm() {
+		dismissPopup();
+		document.getElementById("quote-form-container")?.scrollIntoView(true);
+	}
+
 	useEffect(() => {
 		document.body.style.overflow = "hidden";
 	}, []);
@@ -27,6 +32,7 @@ export default function PopupOverlay() {
 			<h1 className="font-bold text-4xl text-ascendblue w-full px-2">SPRING STARTUP</h1>
 			<p className="mx-6">Spring is right around the corner! Get ahead of the game and schedule a Spring Startup / Activation for your irrigation system today!</p>
 			<div className="bg-ascendblue rounded-lg px-3 py-2 drop-shadow-xl font-medium">PROCEED TO SITE</div>
+			<div className="bg-ascendblue rounded-lg px-3 py-2 drop-shadow-xl font-medium" onClick={scrollToForm}>FILL OUT FORM</div>
 		</div>
   )
 }

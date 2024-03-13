@@ -1,6 +1,6 @@
 import Image, { StaticImageData } from "next/image";
 import homePageHero from "../public/home-page-hero-small.png";
-import ascendLogo from "../public/ascend-logo-v2.png";
+import ascendLogo from "../public/ascend-logo-v3.png";
 import processDiagram from "../public/process.png";
 import processDiagramHorizontal from "../public/process-horizontal.png";
 import Carousel from "./components/Carousel";
@@ -10,11 +10,6 @@ import CallNowButton from "./components/CallNowButton";
 import QuoteForm from "./components/QuoteForm";
 import TestimonialCarousel from "./components/TestimonialCarousel";
 import AreaMap from "./components/AreaMap";
-import phoneIcon from "../public/phone_icon.png";
-import emailIcon from "../public/email-icon.png";
-import locationIcon from "../public/location-icon.png";
-import fbIcon from "../public/fb-icon.png";
-import igIcon from "../public/ig-icon.png";
 
 import carouselImage1 from "../public/carousel-images/homepage/carousel-00001.png";
 import carouselImage2 from "../public/carousel-images/homepage/carousel-00002.png";
@@ -40,29 +35,40 @@ import blurredHero from "../public/blurred-hero.png";
 import Certifications from "./components/Certifications";
 import PopupOverlay from "./components/PopupOverlay";
 
+import newIrrigationSystemTileImage from "../public/service-header-images/new-installation.png";
+import irrigationServicesTileImage from "../public/service-header-images/irrigation-service.png";
+import paverPatiosTileImage from "../public/service-header-images/paver-patios.png";
+import retainingWallsTileImage from "../public/service-header-images/retaining-walls.png";
+import threeDDesignsTileImage from "../public/service-header-images/3d-designs.png";
+
 const homePageCarouselImages: StaticImageData[] = [carouselImage1, carouselImage2, carouselImage3, carouselImage4, carouselImage5, carouselImage6, carouselImage7, carouselImage8, 
   carouselImage9, carouselImage10, carouselImage11, carouselImage12, carouselImage13, carouselImage14, carouselImage15, carouselImage16, carouselImage17, carouselImage18]
 
 const servicePhotoMap = {
-  "Residential Sprinklers": {
-    image: irrigationBg.src,
+  "New Irrigation System Installation": {
+    image: newIrrigationSystemTileImage.src,
     pageUrl: "/irrigation",
-    blurb: "Discover our top-notch irrigation services, tailored to keep your garden thriving and radiant. We specialize in efficient sprinkler system installations, timely maintenance, and swift repairs, ensuring your plants receive the perfect drink. Let us make your garden flourish with our expertise and care!",
+    blurb: "Transform your landscape by installing a new irrigation system! Our expert team specializes in crafting customized irrigation solutions. From design to implementation, trust us to bring your vision to life. Elevate your outdoor space with our top-notch New Irrigation System Installation – where innovation meets green perfection!",
   },
-  "Commercial Sprinklers": {
-    image: carouselImage12.src,
-    pageUrl: "/irrigation",
-    blurb: "Elevate your business landscape with our expert Commercial Landscaping services. From cutting-edge sprinkler installations to prompt maintenance and repairs, we ensure a vibrant and impressive outdoor space. Transform your commercial property with our dedicated expertise!",
-  },
-  "RPZ Testing": {
-    image: carouselImage12.src,
-    pageUrl: "/irrigation",
-    blurb: "Ensure the safety of your water supply with our top-tier RPZ Testing service. Our skilled team specializes in comprehensive backflow prevention testing, guaranteeing the integrity of your water system. Trust us to keep your water supply secure and compliant. Choose confidence, choose our RPZ Testing expertise!",
-  },
-  "Service / Repairs": {
-    image: carouselImage12.src,
+  "Irrigation Services": {
+    image: irrigationServicesTileImage.src,
     pageUrl: "/irrigation",
     blurb: "Revitalize your landscape with our reliable service and repairs. Our skilled team excels in efficient system repairs and maintenance, ensuring your irrigation operates at its best. From troubleshooting to proactive care, trust us to keep your landscape thriving. Choose excellence in Irrigation Service/Repairs - your garden deserves the best!",
+  },
+  "Paver Patios": {
+    image: paverPatiosTileImage.src,
+    pageUrl: "/paverpatios",
+    blurb: "Enhance your outdoor ambiance with our leading Paver Patio Installation service. Our expert team specializes in crafting bespoke patio spaces that seamlessly blend style and durability. From meticulous design to flawless installation, trust us to bring your vision to life. Elevate your outdoor experience with our premium Paver Patio Installation!",
+  },
+  "Retaining Walls": {
+    image: retainingWallsTileImage.src,
+    pageUrl: "/retainingwalls",
+    blurb: "Explore our superior Retaining Wall Installation services, crafted to enhance the beauty and functionality of your outdoor space. Our expertise lies in creating durable and aesthetically pleasing retaining walls, providing structural support and adding a touch of elegance to your landscape. Add nuance and structure to your outdoor space with an Ascend retaining wall!",
+  },
+  "3D Designs": {
+    image: threeDDesignsTileImage.src,
+    pageUrl: "/3ddesigns",
+    blurb: "Immerse yourself in the possibilities of your outdoor projects with our cutting-edge 3D Design service. Elevate your planning experience as we bring your vision to life in three-dimensional detail. Our expertise in creating realistic renderings ensures a comprehensive preview of your outdoor space before implementation. Unleash the full potential of your projects with our innovative 3D Design service!",
   },
 }
 
@@ -91,9 +97,9 @@ export default function Home() {
 								backgroundPosition: "center",
 							}} />
 						<div className="relative flex-1 flex flex-col items-center justify-end gap-5 pb-12">
-							<h3 className="font-semibold text-2xl mx-3 text-ascendblue text-center">Call <a href="tel:630-639-8089">(630) 639-8089</a></h3>
-							<h1 className="font-bold text-4xl mx-3 text-ascendblue text-center">Ascend to greener, healthier lawns in 2024!</h1>
-							<h3 className="font-bold mx-3 text-ascendblue text-center">Installation | Service/Repairs | Backflow Testing</h3>
+							<h3 className="font-semibold text-2xl mx-3 text-white text-center">Call <a href="tel:630-639-8089">(630) 639-8089</a></h3>
+							<h1 className="font-bold text-4xl mx-3 text-white text-center">Ascend to greener, healthier lawns in 2024!</h1>
+							<h3 className="font-bold mx-3 text-white text-center">Installation | Service/Repairs | Backflow Testing</h3>
 							<div className="grid grid-cols-2 text-center gap-3 mt-5 font-semibold text-lg">
 								<a href="#quote-form"><div className="bg-ascendblue rounded-lg px-3 py-3 drop-shadow-xl">CONTACT FORM</div></a>
 								<a href="tel:630-639-8089"><div className="bg-ascendblue rounded-lg px-3 py-3 drop-shadow-xl">CALL NOW</div></a>
@@ -234,64 +240,6 @@ export default function Home() {
       { /* Quote Form */ }
       <div className="pt-6 w-full flex flex-col items-center justify-center">
         <QuoteForm />
-      </div>
-
-      <div className="w-full mt-10 mb-6">
-        <hr className="w-[90%] mx-auto border-gray-400" />
-      </div>
-
-      <div className="w-full flex flex-col items-center justify-center text-black leading-none">
-        <h1 className="font-semibold text-2xl mb-2">Ascend Irrigation</h1>
-
-        <div className="flex items-center justify-center mb-4">
-          <a href="https://www.facebook.com/profile.php?id=100092322747572&mibextid=LQQJ4d" target="_blank">
-            <Image
-              src={fbIcon}
-              alt=""
-              width={35}
-            />
-          </a>
-          <a href="https://www.instagram.com/ascend_landscaping/" target="_blank">
-            <Image
-              src={igIcon}
-              alt=""
-              width={55}
-            />
-          </a>
-        </div>
-
-        <span className="font-semibold text-lg">Business Hours</span>
-        <span>Monday - Friday 7am-9pm</span>
-        <span>Saturday & Sunday 8am-5pm</span>
-
-      </div>
-      <div className="mt-6 w-full flex flex-col justify-center items-center text-black text-lg leading-none pb-12">
-        <div className="flex items-center gap-2">
-          <Image
-            className="block h-4 w-4"
-            src={locationIcon}
-            alt=""
-          />
-          <span>813 E Washingston St<br />West Chicago, IL 60185</span>
-        </div>
-
-        <a href="tel:630-639-8089" className="mt-2 flex items-center gap-2">
-          <Image
-            className="block h-4 w-4"
-            src={phoneIcon}
-            alt=""
-          />
-          <span className="text-[#6EA750] underline text-lg">(630) 639-8089</span>
-        </a>
-
-        <a href="mailto:ascend.landscaping1@gmail.com" className="mt-2 flex items-center gap-2">
-          <Image
-            className="block h-4 w-4"
-            src={emailIcon}
-            alt=""
-          />
-          <span className="text-[#6EA750] underline">ascend.landscaping1@gmail.com</span>
-        </a>
       </div>
     </main>
   )

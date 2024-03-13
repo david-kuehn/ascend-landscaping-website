@@ -64,7 +64,7 @@ export default function QuoteForm() {
   };
 
   return (
-    <div className="text-black font-serif bg-gray-300 w-5/6 lg:w-1/2 px-4 sm:px-12 md:px-20 lg:px-24 py-5 rounded-md">
+    <div className="text-black font-serif bg-gray-300 w-5/6 lg:w-1/2 px-4 sm:px-12 md:px-20 lg:px-24 py-5 rounded-md" id="quote-form-container">
       <form onSubmit={handleSubmit}>
         <h1 id="quote-form" className="text-3xl text-center font-semibold mb-2">Get a Free Estimate!</h1>
 
@@ -155,32 +155,32 @@ export default function QuoteForm() {
             <span>$0-$2,000</span>
           </li>
           <li className="grid grid-cols-formitem items-center mt-1">
-            <input type="radio" className="mr-1 w-4" name="customerBudget" onChange={() => setQuoteFormData({...quoteFormData, customerBudget: "$2,000-$8,000"})} />
-            <span>$2,000-$8,000</span>
+            <input type="radio" className="mr-1 w-4" name="customerBudget" onChange={() => setQuoteFormData({...quoteFormData, customerBudget: "$2,000-$4,000"})} />
+            <span>$2,000-$4,000</span>
           </li>
           <li className="grid grid-cols-formitem items-center mt-1">
-            <input type="radio" className="mr-1 w-4" name="customerBudget" onChange={() => setQuoteFormData({...quoteFormData, customerBudget: "$8,000-$15,000"})} />
-            <span>$8,000-$15,000</span>
+            <input type="radio" className="mr-1 w-4" name="customerBudget" onChange={() => setQuoteFormData({...quoteFormData, customerBudget: "$4,000-$8,000"})} />
+            <span>$4,000-$8,000</span>
           </li>
           <li className="grid grid-cols-formitem items-center mt-1">
-            <input type="radio" className="mr-1 w-4" name="customerBudget" onChange={() => setQuoteFormData({...quoteFormData, customerBudget: "$15,000-$30,000"})} />
-            <span>$15,000-$30,000</span>
+            <input type="radio" className="mr-1 w-4" name="customerBudget" onChange={() => setQuoteFormData({...quoteFormData, customerBudget: "$8,000-$12,000"})} />
+            <span>$8,000-$12,000</span>
           </li>
           <li className="grid grid-cols-formitem items-center mt-1">
-            <input type="radio" className="mr-1 w-4" name="customerBudget" onChange={() => setQuoteFormData({...quoteFormData, customerBudget: "$30,000-$50,000"})} />
-            <span>$30,000-$50,000</span>
+            <input type="radio" className="mr-1 w-4" name="customerBudget" onChange={() => setQuoteFormData({...quoteFormData, customerBudget: "$12,000-$20,000"})} />
+            <span>$12,000-$20,000</span>
           </li>
           <li className="grid grid-cols-formitem items-center mt-1">
-            <input type="radio" className="mr-1 w-4" name="customerBudget" onChange={() => setQuoteFormData({...quoteFormData, customerBudget: "$50,000-$80,000"})} />
-            <span>$50,000-$80,000</span>
+            <input type="radio" className="mr-1 w-4" name="customerBudget" onChange={() => setQuoteFormData({...quoteFormData, customerBudget: "$20,000-$40,000"})} />
+            <span>$20,000-$40,000</span>
           </li>
           <li className="grid grid-cols-formitem items-center mt-1">
-            <input type="radio" className="mr-1 w-4" name="customerBudget" onChange={() => setQuoteFormData({...quoteFormData, customerBudget: "$80,000-$100,000"})} />
-            <span>$80,000-$100,000</span>
+            <input type="radio" className="mr-1 w-4" name="customerBudget" onChange={() => setQuoteFormData({...quoteFormData, customerBudget: "$40,000-$60,000"})} />
+            <span>$40,000-$60,000</span>
           </li>
           <li className="grid grid-cols-formitem items-center mt-1">
-            <input type="radio" className="mr-1 w-4" name="customerBudget" onChange={() => setQuoteFormData({...quoteFormData, customerBudget: "$100,000+"})} />
-            <span>$100,000+</span>
+            <input type="radio" className="mr-1 w-4" name="customerBudget" onChange={() => setQuoteFormData({...quoteFormData, customerBudget: "$60,000+"})} />
+            <span>$60,000+</span>
           </li>
         </div>
 

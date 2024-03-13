@@ -1,6 +1,6 @@
 import Image from "next/image";
 import phoneIcon from "../../public/phone_icon.png";
-import ascendLogo from "../../public/ascend-logo-v2.png";
+import ascendLogo from "../../public/ascend-logo-v3.png";
 
 export default function Navbar(props: { currentPage: number }) {
   return (
