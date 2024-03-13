@@ -7,7 +7,7 @@ export default function CalendlyButton() {
 		<div className="fixed bottom-2 right-0 bg-ascendblue/90 p-2 rounded-l-xl cursor-pointer">
 			<PopupButton
 				url="https://calendly.com/ascend-design1"
-				rootElement={document.getElementById("root-body")}
+				rootElement={document.getElementById("root-body")!}
 				text="Schedule Now!"
 			/>
 		</div>

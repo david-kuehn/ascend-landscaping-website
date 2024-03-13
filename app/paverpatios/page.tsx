@@ -27,7 +27,7 @@ export default function Irrigation() {
 
 			<div className="text-black flex flex-col items-center justify-start pt-5">
 				<p className="text-black sm:text-lg leading-tight w-3/4 sm:w-3/5 max-w-[50rem] sm:mt-3 mt-2 mb-6 text-justify justify-center">
-				Transform your outdoor living experience with a stunning paver patio from Ascend! Our expert team specializes in creating elegant and functional paver patios that enhance the beauty and functionality of your outdoor space. Imagine relaxing or entertaining on a custom-designed patio that complements your home's aesthetic and adds value to your property. With a wide range of paver styles, colors, and patterns to choose from, we can create a unique and inviting patio that suits your lifestyle and preferences. Trust us to bring your outdoor vision to life with a durable, low-maintenance, and visually appealing paver patio that will be the envy of your neighbors.
+				Transform your outdoor living experience with a stunning paver patio from Ascend! Our expert team specializes in creating elegant and functional paver patios that enhance the beauty and functionality of your outdoor space. Imagine relaxing or entertaining on a custom-designed patio that complements your home&apos;s aesthetic and adds value to your property. With a wide range of paver styles, colors, and patterns to choose from, we can create a unique and inviting patio that suits your lifestyle and preferences. Trust us to bring your outdoor vision to life with a durable, low-maintenance, and visually appealing paver patio that will be the envy of your neighbors.
 				</p>
 			</div>
 

@@ -9,7 +9,7 @@ import irrigationServicesImage from "../../public/service-header-images/irrigati
 import addlServicesImage from "../../public/irrigation-bg.png";
 import maintenanceImage from "../../public/irrigation-maintenance-image.jpeg";
 
-export default function PaverPatios() {
+export default function PaverPatio() {
   return (
     <main className="font-serif">
       <Navbar currentPage={0} />
@@ -31,7 +31,7 @@ export default function PaverPatios() {
 
 			<div className="text-black flex flex-col items-center justify-start pt-5">
 				<p className="text-black sm:text-lg leading-tight w-3/4 sm:w-3/5 max-w-[50rem] sm:mt-3 mt-2 mb-6 text-justify justify-center">
-				At Ascend, we specialize in creating lush, thriving landscapes through our top-notch irrigation solutions. From new installations that perfectly tailor to your property's needs to expert maintenance services that ensure your system runs efficiently year-round, we are here to take care of all your irrigation needs. Our team of skilled professionals is dedicated to providing exceptional service, prompt repairs, and sustainable solutions that will keep your landscape healthy and beautiful. Choose us for unmatched quality, expertise, and customer satisfaction in every drop!
+				At Ascend, we specialize in creating lush, thriving landscapes through our top-notch irrigation solutions. From new installations that perfectly tailor to your property&apos;s needs to expert maintenance services that ensure your system runs efficiently year-round, we are here to take care of all your irrigation needs. Our team of skilled professionals is dedicated to providing exceptional service, prompt repairs, and sustainable solutions that will keep your landscape healthy and beautiful. Choose us for unmatched quality, expertise, and customer satisfaction in every drop!
 				</p>
 			</div>
 
