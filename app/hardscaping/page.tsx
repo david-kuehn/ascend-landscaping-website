@@ -115,6 +115,8 @@ export default function Hardscaping() {
 			{ /* Retaining Walls */ }
 
 			<div className="text-black flex flex-col items-center justify-start pt-5">
+        <h2 className="font-medium text-3xl mb-2">Retaining Walls</h2>
+
 				<p className="text-black sm:text-lg leading-tight w-3/4 sm:w-3/5 max-w-[50rem] sm:mt-3 mt-2 mb-6 text-justify justify-center">
 				Elevate the beauty and functionality of your outdoor space with a custom-designed retaining wall! Our expert team specializes in creating stunning and durable retaining walls that not only add visual appeal but also provide essential support and structure to your landscape. Imagine a beautifully crafted wall that enhances the contours of your yard, creates distinct outdoor living areas, and adds value to your property. With a wide range of materials, colors, and styles to choose from, we can tailor a retaining wall to complement your home&apos;s architecture and landscaping. We will transform your outdoor space with a stylish and sturdy retaining wall that will stand the test of time and become a focal point of your property!
 				</p>
