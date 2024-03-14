@@ -8,6 +8,15 @@ import newInstallationsImage from "../../public/service-header-images/new-instal
 import irrigationServicesImage from "../../public/service-header-images/irrigation-service.png";
 import addlServicesImage from "../../public/irrigation-bg.png";
 import maintenanceImage from "../../public/irrigation-maintenance-image.jpeg";
+import Pricing from "../components/Pricing";
+
+const pricingSheet = {
+	"Inspection & Consultation": "$100-$150",
+  "Start Up & Activation": "$125-$275",
+  "Winterization": "$125-$275",
+  "Backflow Certification / RPZ Testing": "starting at $135",
+  "Full Season Package": "starting at $350",
+};
 
 export default function PaverPatio() {
   return (
@@ -62,6 +71,9 @@ export default function PaverPatio() {
 					<li className="my-2"><strong>Environmental benefits:</strong> By using water more efficiently and reducing runoff, new irrigation systems help conserve water resources and promote environmental sustainability.</li>
 				</ul>
 			</div>
+
+			{/* Pricing section */}
+			<Pricing pricingSheet={pricingSheet} />
 
       {/* Repairs section */}
       <div className="w-full pt-6 pb-8 md:pt-8 md:pb-12 bg-[#002a38] text-center text-white flex flex-col items-center justify-center">

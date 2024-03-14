@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import ascendLogo from "../../public/ascend-logo-v2.png";
+import ascendLogo from "../../public/ascend-logo-v3.png";
 
 export default function PopupOverlay() {
 	const [isShown, setIsShown] = useState<boolean>(true);

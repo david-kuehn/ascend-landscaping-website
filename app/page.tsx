@@ -45,39 +45,21 @@ const homePageCarouselImages: StaticImageData[] = [carouselImage1, carouselImage
   carouselImage9, carouselImage10, carouselImage11, carouselImage12, carouselImage13, carouselImage14, carouselImage15, carouselImage16, carouselImage17, carouselImage18]
 
 const servicePhotoMap = {
-  "New Irrigation System Installation": {
+  "Irrigation Services": {
     image: newIrrigationSystemTileImage.src,
     pageUrl: "/irrigation",
-    blurb: "Transform your landscape by installing a new irrigation system! Our expert team specializes in crafting customized irrigation solutions. From design to implementation, trust us to bring your vision to life. Elevate your outdoor space with our top-notch New Irrigation System Installation – where innovation meets green perfection!",
+    blurb: "Transform your landscape with a new irrigation system, or touch up your existing system! Our expert team specializes in crafting customized irrigation solutions. From design to implementation, trust us to bring your vision to life. Elevate your outdoor space with our top-notch New Irrigation System Installation – where innovation meets green perfection!",
   },
-  "Irrigation Services": {
-    image: irrigationServicesTileImage.src,
-    pageUrl: "/irrigation",
-    blurb: "Revitalize your landscape with our reliable service and repairs. Our skilled team excels in efficient system repairs and maintenance, ensuring your irrigation operates at its best. From troubleshooting to proactive care, trust us to keep your landscape thriving. Choose excellence in Irrigation Service/Repairs - your garden deserves the best!",
-  },
-  "Paver Patios": {
+  "Hardscaping": {
     image: paverPatiosTileImage.src,
-    pageUrl: "/paverpatios",
-    blurb: "Enhance your outdoor ambiance with our leading Paver Patio Installation service. Our expert team specializes in crafting bespoke patio spaces that seamlessly blend style and durability. From meticulous design to flawless installation, trust us to bring your vision to life. Elevate your outdoor experience with our premium Paver Patio Installation!",
-  },
-  "Retaining Walls": {
-    image: retainingWallsTileImage.src,
-    pageUrl: "/retainingwalls",
-    blurb: "Explore our superior Retaining Wall Installation services, crafted to enhance the beauty and functionality of your outdoor space. Our expertise lies in creating durable and aesthetically pleasing retaining walls, providing structural support and adding a touch of elegance to your landscape. Add nuance and structure to your outdoor space with an Ascend retaining wall!",
+    pageUrl: "/hardscaping",
+    blurb: "Enhance your outdoor ambiance with our leading Hardscaping services! Our expert team specializes in crafting bespoke patio spaces that seamlessly blend style and durability. From meticulous design to flawless installation, trust us to bring your vision to life. Elevate your outdoor experience with our premium Patios and Retaining Walls!",
   },
   "3D Designs": {
     image: threeDDesignsTileImage.src,
     pageUrl: "/3ddesigns",
     blurb: "Immerse yourself in the possibilities of your outdoor projects with our cutting-edge 3D Design service. Elevate your planning experience as we bring your vision to life in three-dimensional detail. Our expertise in creating realistic renderings ensures a comprehensive preview of your outdoor space before implementation. Unleash the full potential of your projects with our innovative 3D Design service!",
   },
-}
-
-const pricingSheet = {
-	"Inspection & Consultation": "$100-$150",
-  "Start Up & Activation": "$125-$275",
-  "Winterization": "$125-$275",
-  "Backflow Certification / RPZ Testing": "starting at $135",
-  "Full Season Package": "starting at $350",
 }
 
 export default function Home() {
@@ -96,10 +78,9 @@ export default function Home() {
 								backgroundSize: "cover",
 								backgroundPosition: "center",
 							}} />
-						<div className="relative flex-1 flex flex-col items-center justify-end gap-5 pb-12">
+						<div className="relative flex-1 flex flex-col items-center justify-end gap-5 pb-16">
 							<h3 className="font-semibold text-2xl mx-3 text-white text-center">Call <a href="tel:630-639-8089">(630) 639-8089</a></h3>
-							<h1 className="font-bold text-4xl mx-3 text-white text-center">Ascend to greener, healthier lawns in 2024!</h1>
-							<h3 className="font-bold mx-3 text-white text-center">Installation | Service/Repairs | Backflow Testing</h3>
+							<h1 className="font-bold text-4xl mx-3 text-white text-center">Ascend with our irrigation and hardscape solutions!</h1>
 							<div className="grid grid-cols-2 text-center gap-3 mt-5 font-semibold text-lg">
 								<a href="#quote-form"><div className="bg-ascendblue rounded-lg px-3 py-3 drop-shadow-xl">CONTACT FORM</div></a>
 								<a href="tel:630-639-8089"><div className="bg-ascendblue rounded-lg px-3 py-3 drop-shadow-xl">CALL NOW</div></a>
@@ -143,27 +124,6 @@ export default function Home() {
         )}
 				</div>
       </div>
-
-			{/* Pricing section */}
-      <div className="flex flex-col items-center w-full pt-6 pb-8 md:pt-8 md:pb-12 px-8 text-black text-center">
-        <h2 className="font-medium text-3xl mb-4">Pricing</h2>
-				<div className="grid grid-cols-1 gap-3">
-				{ Object.entries(pricingSheet).map(([key, value]) => 
-					<div key={key}
-						className="h-32 rounded-xl overflow-clip items-center border-2 border-gray"
-						style={{
-							display: "grid",
-							gridTemplateRows: "2rem 1fr",
-						}}
-					>
-						<span className="font-medium">{key}</span>
-						<div className="bg-ascendblue h-full flex justify-center items-center px-3">
-							<span className="text-white text-4xl font-medium">{value}</span>
-						</div>
-					</div>
-				)}
-				</div>
-			</div>
 
       {/* Our Process section */}
       <div className="flex flex-col items-center w-full pt-6 pb-8 md:pt-8 md:pb-12 px-8 text-black text-center">

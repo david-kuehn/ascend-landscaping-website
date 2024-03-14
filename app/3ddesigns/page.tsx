@@ -4,6 +4,11 @@ import FullHeightContainer from "../components/FullHeightContainer";
 import Navbar from "../components/Navbar";
 
 import threeDHero from "../../public/service-header-images/3d-designs.png";
+import Pricing from "../components/Pricing";
+
+const pricingSheet = {
+	"Custom 3D Design": "starting at $300",
+};
 
 export default function ThreeDDesigns() {
   return (
@@ -37,6 +42,9 @@ export default function ThreeDDesigns() {
 					<li className="my-2"><strong>Enhance communication:</strong> A 3D design facilitates communication between homeowners and contractors by providing a clear visual reference that ensures everyone is on the same page regarding the project specifications, requirements, and design details.</li>
 				</ul>
 			</div>
+
+			{/* Pricing section */}
+			<Pricing pricingSheet={pricingSheet} />
 		</main>
 	)
 }
