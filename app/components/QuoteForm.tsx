@@ -21,6 +21,16 @@ export default function QuoteForm() {
     other: false,
   });
 
+	const [hardscapingServices, setHardscapingServices] = useState({
+    patio: false,
+    retainingWall: false,
+    walkway: false,
+    steps: false,
+    hardscapingRepairs: false,
+    additions: false,
+    other: false,
+  });
+
   const [otherService, setOtherService] = useState("");
 
   const handleChange = (e: any) => {
@@ -41,10 +51,18 @@ export default function QuoteForm() {
       }
     });
 
+		let selectedHardscapingKeys: string[] = [];
+    Object.keys(hardscapingServices).forEach((key, idx) => {
+      if (hardscapingServices[key as keyof typeof hardscapingServices] == true) {
+        selectedHardscapingKeys.push(key);
+      }
+    });
+
     const quoteDataToSubmit = {
       ...quoteFormData,
       interestedServices: {
         irrigation: selectedIrrigationKeys,
+				hardscaping: selectedHardscapingKeys,
         other: otherService
       },
     };
@@ -141,6 +159,40 @@ export default function QuoteForm() {
               <span>Other</span>
             </li>
           </div>
+
+          <div className="mt-2">
+            <h3 className="font-semibold leading-none text-base">Hardscaping</h3>
+
+            <li className="grid grid-cols-formitem items-center mt-1">
+              <input type="checkbox" className="mr-2 w-4" name="hardscapingServices.patio" checked={hardscapingServices.patio} onChange={() => setHardscapingServices({...hardscapingServices, patio: !hardscapingServices.patio})} />
+              <span className="mt-1">Patio</span>
+            </li>
+            <li className="grid grid-cols-formitem items-center mt-1">
+              <input type="checkbox" className="mr-2 w-4" name="hardscapingServices.retainingWall" checked={hardscapingServices.retainingWall} onChange={() => setHardscapingServices({...hardscapingServices, retainingWall: !hardscapingServices.retainingWall})} />
+              <span className="mt-1">Retaining Wall</span>
+            </li>
+            <li className="grid grid-cols-formitem items-center mt-1">
+              <input type="checkbox" className="mr-2 w-4" name="hardscapingServices.walkway" checked={hardscapingServices.walkway} onChange={() => setHardscapingServices({...hardscapingServices, walkway: !hardscapingServices.walkway})} />
+              <span className="mt-1">Walkway</span>
+            </li>
+            <li className="grid grid-cols-formitem items-center mt-1">
+              <input type="checkbox" className="mr-2 w-4" name="hardscapingServices.steps" checked={hardscapingServices.steps} onChange={() => setHardscapingServices({...hardscapingServices, steps: !hardscapingServices.steps})} />
+              <span className="mt-1">Steps</span>
+            </li>
+            <li className="grid grid-cols-formitem items-center mt-1">
+              <input type="checkbox" className="mr-2 w-4" name="hardscapingServices.hardscapingRepairs" checked={hardscapingServices.hardscapingRepairs} onChange={() => setHardscapingServices({...hardscapingServices, hardscapingRepairs: !hardscapingServices.hardscapingRepairs})} />
+              <span className="mt-1">Repairs</span>
+            </li>
+            <li className="grid grid-cols-formitem items-center mt-1">
+              <input type="checkbox" className="mr-2 w-4" name="hardscapingServices.additions" checked={hardscapingServices.additions} onChange={() => setHardscapingServices({...hardscapingServices, additions: !hardscapingServices.additions})} />
+              <span className="mt-1">Additions</span>
+            </li>
+            <li className="grid grid-cols-formitem items-center mt-1">
+              <input type="checkbox" className="mr-2 w-4" name="hardscapingServices.other" checked={hardscapingServices.other} onChange={() => setHardscapingServices({...hardscapingServices, other: !hardscapingServices.other})} />
+              <span className="mt-1">Other</span>
+            </li>
+          </div>
+
           <div className="mt-2 flex flex-col">
             <h3 className="font-semibold leading-none text-lg">Something else:</h3>
 

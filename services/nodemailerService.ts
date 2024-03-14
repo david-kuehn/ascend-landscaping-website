@@ -4,7 +4,7 @@ export interface EstimateDetails {
   customerEmail: string;
   customerPhone: string;
   customerBudget: string;
-  interestedServices: { irrigation: string[], other: string }
+  interestedServices: { irrigation: string[], hardscaping: string[], other: string }
 }
 
 const serviceKeyToPrettyStringMap = {
@@ -15,11 +15,21 @@ const serviceKeyToPrettyStringMap = {
   winterization: "Shut Downs / Winterization",
   backflowTesting: "Backflow Testing",
   rpzCertification: "RPZ Certification",
+	patio: "Patio",
+  retainingWall: "Retaining Wall",
+  walkway: "Walkway",
+  steps: "Steps",
+  hardscapingRepairs: "Repairs",
+  additions: "Additions",
   other: "Other Services (customer did not specify)",
 }
 
 export function buildEmailBody(customerRequestDetails: EstimateDetails) {
   const irrigationServicesHtmlList = customerRequestDetails.interestedServices.irrigation.map((service: string) => {
+    return `<li>${serviceKeyToPrettyStringMap[service as keyof typeof serviceKeyToPrettyStringMap]}</li>`;
+  }).join('\n');
+
+	const hardscapingServicesHtmlList = customerRequestDetails.interestedServices.hardscaping.map((service: string) => {
     return `<li>${serviceKeyToPrettyStringMap[service as keyof typeof serviceKeyToPrettyStringMap]}</li>`;
   }).join('\n');
 
@@ -48,6 +58,11 @@ export function buildEmailBody(customerRequestDetails: EstimateDetails) {
   <span style="font-weight: bold">Irrigation:</span>
   <ul>
     ${irrigationServicesHtmlList}
+  </ul>
+
+	<span style="font-weight: bold">Hardscaping:</span>
+  <ul>
+    ${hardscapingServicesHtmlList}
   </ul>
 
   <span style="font-weight: bold">Other:</span>
