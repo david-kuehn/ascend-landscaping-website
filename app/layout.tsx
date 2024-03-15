@@ -60,10 +60,10 @@ export default function RootLayout({
 				</div>
 				 
 				<div className="font-serif w-full flex flex-col items-center justify-center text-black leading-none">
-					<h1 className="font-semibold text-2xl mb-2">Ascend Irrigation</h1>
+					<h1 className="font-semibold text-2xl mb-2">Ascend</h1>
 
 					<div className="flex items-center justify-center mb-4">
-						<a href="https://www.facebook.com/profile.php?id=100092322747572&mibextid=LQQJ4d" target="_blank">
+						<a href="https://www.facebook.com/profile.php?id=100092322747572&mibextid=LQQJ4d" target="_blank" className="mx-[10px]">
 							<Image
 								src={fbIcon}
 								alt=""
@@ -80,8 +80,8 @@ export default function RootLayout({
 					</div>
 
 					<span className="font-semibold text-lg">Business Hours</span>
-					<span>Monday - Friday 7am-9pm</span>
-					<span>Saturday & Sunday 8am-5pm</span>
+					<span>Mon - Fri 7am-10pm</span>
+					<span>Sat - Sun 8am-7pm</span>
 
 				</div>
 				<div className="mt-6 w-full flex flex-col justify-center items-center text-black text-lg leading-none pb-12">
@@ -103,13 +103,13 @@ export default function RootLayout({
 						<span className="text-[#6EA750] underline text-lg">(630) 639-8089</span>
 					</a>
 
-					<a href="mailto:ascend.landscaping1@gmail.com" className="mt-2 flex items-center gap-2">
+					<a href="mailto:ascend.design1@gmail.com" className="mt-2 flex items-center gap-2">
 						<Image
 							className="block h-4 w-4"
 							src={emailIcon}
 							alt=""
 						/>
-						<span className="text-[#6EA750] underline">ascend.landscaping1@gmail.com</span>
+						<span className="text-[#6EA750] underline">ascend.design1@gmail.com</span>
 					</a>
 				</div>
 			</footer>

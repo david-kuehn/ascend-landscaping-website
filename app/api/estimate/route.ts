@@ -32,7 +32,7 @@ export async function POST(request: Request) {
       name: requestBodyJson.customerName,
       address: process.env.NODEMAILER_EMAIL
     },
-    to: "ascend.landscaping1@gmail.com",
+    to: "ascend.design1@gmail.com",
     //to: "dmkuehn6@gmail.com",
     replyTo: requestBodyJson.customerEmail,
     subject: `New Estimate Request from ${requestBodyJson.customerName}`,
