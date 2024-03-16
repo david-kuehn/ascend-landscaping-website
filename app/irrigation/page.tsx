@@ -11,7 +11,7 @@ import maintenanceImage from "../../public/irrigation-maintenance-image.jpeg";
 import Pricing from "../components/Pricing";
 
 const pricingSheet = {
-	"Inspection & Advise": "$75-$125",
+	"Inspect & Advise": "$75-$125",
   "Start Up & Activation": "$100-$275",
   "Winterization": "$125-$275",
   "Backflow Certification / RPZ Testing": "starting at $135",
