@@ -11,6 +11,8 @@ import locationIcon from "../public/location-icon.png";
 import fbIcon from "../public/fb-icon.png";
 import igIcon from "../public/ig-icon.png";
 
+import { Analytics } from "@vercel/analytics/react";
+
 const yrsa = Yrsa({
   subsets: ['latin'],
   display: 'swap',
@@ -50,7 +52,10 @@ export default function RootLayout({
         sizes="32x32"
       />
 
-      <body className={urbanist.variable} id="root-body">{children}</body>
+      <body className={urbanist.variable} id="root-body">
+				{children}
+				<Analytics />
+			</body>
 
 			<ClientRenderedCalendly />
 
