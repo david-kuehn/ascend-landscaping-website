@@ -31,8 +31,8 @@ const ClientRenderedCalendly = dynamic(
 )
 
 export const metadata: Metadata = {
-  title: 'Ascend Landscaping',
-  description: "Make your exterior dreams come true with Ascend Landscaping! Proudly serving Chicagoland with quality landscaping at a fair price.",
+  title: "Ascend Irriscape",
+  description: "Make your exterior dreams come true with Ascend Irriscape! Proudly serving Chicagoland with quality irrigation and hardscaping services at a fair price. Contact us today!",
 }
 
 export default function RootLayout({
