@@ -200,38 +200,38 @@ export default function QuoteForm() {
           </div>
         </div>
 
-        <h2 className="font-bold text-xl mt-6">Budget</h2>
+        <h2 className="font-bold text-xl mt-6">Budget <span className="text-red-500">*</span></h2>
         <div className="grid gap-x-2 grid-cols-2 w-full leading-none">
           <li className="grid grid-cols-formitem items-center mt-1">
-            <input type="radio" className="mr-1 w-4" name="customerBudget" onChange={() => setQuoteFormData({...quoteFormData, customerBudget: "$0-2,000"})} />
+            <input type="radio" className="mr-1 w-4" name="customerBudget" onChange={() => setQuoteFormData({...quoteFormData, customerBudget: "$0-2,000"})} required />
             <span>$0-$2,000</span>
           </li>
           <li className="grid grid-cols-formitem items-center mt-1">
-            <input type="radio" className="mr-1 w-4" name="customerBudget" onChange={() => setQuoteFormData({...quoteFormData, customerBudget: "$2,000-$4,000"})} />
+            <input type="radio" className="mr-1 w-4" name="customerBudget" onChange={() => setQuoteFormData({...quoteFormData, customerBudget: "$2,000-$4,000"})} required />
             <span>$2,000-$4,000</span>
           </li>
           <li className="grid grid-cols-formitem items-center mt-1">
-            <input type="radio" className="mr-1 w-4" name="customerBudget" onChange={() => setQuoteFormData({...quoteFormData, customerBudget: "$4,000-$8,000"})} />
+            <input type="radio" className="mr-1 w-4" name="customerBudget" onChange={() => setQuoteFormData({...quoteFormData, customerBudget: "$4,000-$8,000"})} required />
             <span>$4,000-$8,000</span>
           </li>
           <li className="grid grid-cols-formitem items-center mt-1">
-            <input type="radio" className="mr-1 w-4" name="customerBudget" onChange={() => setQuoteFormData({...quoteFormData, customerBudget: "$8,000-$12,000"})} />
+            <input type="radio" className="mr-1 w-4" name="customerBudget" onChange={() => setQuoteFormData({...quoteFormData, customerBudget: "$8,000-$12,000"})} required />
             <span>$8,000-$12,000</span>
           </li>
           <li className="grid grid-cols-formitem items-center mt-1">
-            <input type="radio" className="mr-1 w-4" name="customerBudget" onChange={() => setQuoteFormData({...quoteFormData, customerBudget: "$12,000-$20,000"})} />
+            <input type="radio" className="mr-1 w-4" name="customerBudget" onChange={() => setQuoteFormData({...quoteFormData, customerBudget: "$12,000-$20,000"})} required />
             <span>$12,000-$20,000</span>
           </li>
           <li className="grid grid-cols-formitem items-center mt-1">
-            <input type="radio" className="mr-1 w-4" name="customerBudget" onChange={() => setQuoteFormData({...quoteFormData, customerBudget: "$20,000-$40,000"})} />
+            <input type="radio" className="mr-1 w-4" name="customerBudget" onChange={() => setQuoteFormData({...quoteFormData, customerBudget: "$20,000-$40,000"})} required />
             <span>$20,000-$40,000</span>
           </li>
           <li className="grid grid-cols-formitem items-center mt-1">
-            <input type="radio" className="mr-1 w-4" name="customerBudget" onChange={() => setQuoteFormData({...quoteFormData, customerBudget: "$40,000-$60,000"})} />
+            <input type="radio" className="mr-1 w-4" name="customerBudget" onChange={() => setQuoteFormData({...quoteFormData, customerBudget: "$40,000-$60,000"})} required />
             <span>$40,000-$60,000</span>
           </li>
           <li className="grid grid-cols-formitem items-center mt-1">
-            <input type="radio" className="mr-1 w-4" name="customerBudget" onChange={() => setQuoteFormData({...quoteFormData, customerBudget: "$60,000+"})} />
+            <input type="radio" className="mr-1 w-4" name="customerBudget" onChange={() => setQuoteFormData({...quoteFormData, customerBudget: "$60,000+"})} required />
             <span>$60,000+</span>
           </li>
         </div>
