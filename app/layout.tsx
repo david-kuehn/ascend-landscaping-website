@@ -49,7 +49,7 @@ export default function RootLayout({
         rel="icon"
         href="/icon.png"
         type="image/png"
-        sizes="32x32"
+        sizes="48x48"
       />
 
       <body className={urbanist.variable} id="root-body">
