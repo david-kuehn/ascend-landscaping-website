@@ -129,7 +129,7 @@ export default function Home() {
       <div className="flex flex-col items-center w-full pt-6 pb-8 md:pt-8 md:pb-12 px-8 text-black text-center">
         <h2 className="font-medium text-3xl mb-2">Our Process</h2>
         <p className="mx-5 md:mx-0 md:w-2/3 lg:w-1/2 lg:text-lg mb-8 leading-snug">
-        We ensure that our work is tailored to your specific needs by following an <strong>industry-standard, modern approach to irrigation services</strong>. Just tell us what you’re looking for, and we’ll design and install an irrigation system that suits your needs!
+        We ensure that our work is tailored to your specific needs by following an <strong>industry-standard, modern approach to irrigation services and hardscaping</strong>. Just tell us what you’re looking for, and we’ll design and install a custom irrigation or hardscaping solution that suits your needs!
         </p>
 
         <Image
