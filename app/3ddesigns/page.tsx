@@ -3,7 +3,7 @@ import Image from "next/image";
 import FullHeightContainer from "../components/FullHeightContainer";
 import Navbar from "../components/Navbar";
 
-import threeDHero from "../../public/service-header-images/3d-designs.png";
+import threeDHero from "../../public/service-header-images/3d-designs-small.png";
 import Pricing from "../components/Pricing";
 
 const pricingSheet = {

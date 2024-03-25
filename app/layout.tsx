@@ -12,6 +12,7 @@ import fbIcon from "../public/fb-icon.png";
 import igIcon from "../public/ig-icon.png";
 
 import { Analytics } from "@vercel/analytics/react";
+import { GoogleTagManager } from '@next/third-parties/google';
 
 const yrsa = Yrsa({
   subsets: ['latin'],
@@ -42,6 +43,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+			<GoogleTagManager gtmId="AW-16510033084" />
 			<head>
 				<meta name="theme-color" content="#ffffff" />
 			</head>

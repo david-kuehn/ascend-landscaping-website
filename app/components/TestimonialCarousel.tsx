@@ -90,14 +90,14 @@ export default function TestimonialCarousel() {
       </div>
 
       <div className="absolute translate-y-[-250px] w-full flex justify-between px-6 sm:px-16 md:px-40 lg:px-[13rem]">
-        <button className="embla__prev left-0 top-0" onClick={scrollPrev}>
+        <button className="embla__prev left-0 top-0" onClick={scrollPrev} name="Slide Carousel Left">
           <Image
             src={arrowImg}
             alt=""
             className="w-5 sm:w-8"
           />
         </button>
-        <button className="embla__next rotate-180" onClick={scrollNext}>
+        <button className="embla__next rotate-180" onClick={scrollNext} name="Slide Carousel Right">
           <Image
             src={arrowImg}
             alt=""
