@@ -1,4 +1,5 @@
 "use client";
+import { sendGTMEvent } from "@next/third-parties/google";
 import { useState } from "react"
 
 export default function QuoteForm() {
@@ -242,6 +243,7 @@ export default function QuoteForm() {
           <button
             className="w-32 text-center text-white uppercase font-serif font-bold text-2xl py-2 px-5 rounded-full bg-[#6EA750] hover:scale-110 transition-all drop-shadow-xl"
             type="submit"
+						onClick={() => sendGTMEvent({ event: "conversion" })}
           >
           Submit
           </button>
