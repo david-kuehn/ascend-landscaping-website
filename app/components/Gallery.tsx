@@ -1,44 +1,44 @@
 import ClientGallery from "./ClientGallery";
 
-import galleryImage00 from "../../public/gallery-images/png/gallery-00000.png";
-import galleryImage01 from "../../public/gallery-images/png/gallery-00001.png";
-import galleryImage02 from "../../public/gallery-images/png/gallery-00002.png";
-import galleryImage03 from "../../public/gallery-images/png/gallery-00003.png";
-import galleryImage04 from "../../public/gallery-images/png/gallery-00004.png";
-import galleryImage05 from "../../public/gallery-images/png/gallery-00005.png";
-import galleryImage06 from "../../public/gallery-images/png/gallery-00006.png";
-import galleryImage07 from "../../public/gallery-images/png/gallery-00007.png";
-import galleryImage08 from "../../public/gallery-images/png/gallery-00008.png";
-import galleryImage09 from "../../public/gallery-images/png/gallery-00009.png";
-import galleryImage10 from "../../public/gallery-images/png/gallery-00010.png";
-import galleryImage11 from "../../public/gallery-images/png/gallery-00011.png";
-import galleryImage12 from "../../public/gallery-images/png/gallery-00012.png";
-import galleryImage13 from "../../public/gallery-images/png/gallery-00013.png";
-import galleryImage14 from "../../public/gallery-images/png/gallery-00014.png";
-import galleryImage15 from "../../public/gallery-images/png/gallery-00015.png";
-import galleryImage16 from "../../public/gallery-images/png/gallery-00016.png";
-import galleryImage17 from "../../public/gallery-images/png/gallery-00017.png";
-import galleryImage18 from "../../public/gallery-images/png/gallery-00018.png";
-import galleryImage19 from "../../public/gallery-images/png/gallery-00019.png";
-import galleryImage20 from "../../public/gallery-images/png/gallery-00020.png";
-import galleryImage21 from "../../public/gallery-images/png/gallery-00021.png";
-import galleryImage22 from "../../public/gallery-images/png/gallery-00022.png";
-import galleryImage23 from "../../public/gallery-images/png/gallery-00023.png";
-import galleryImage24 from "../../public/gallery-images/png/gallery-00024.png";
-import galleryImage25 from "../../public/gallery-images/png/gallery-00025.png";
-import galleryImage26 from "../../public/gallery-images/png/gallery-00026.png";
-import galleryImage27 from "../../public/gallery-images/png/gallery-00027.png";
-import galleryImage28 from "../../public/gallery-images/png/gallery-00028.png";
-import galleryImage29 from "../../public/gallery-images/png/gallery-00029.png";
-import galleryImage30 from "../../public/gallery-images/png/gallery-00030.png";
-import galleryImage31 from "../../public/gallery-images/png/gallery-00031.png";
-import galleryImage32 from "../../public/gallery-images/png/gallery-00032.png";
-import galleryImage33 from "../../public/gallery-images/png/gallery-00033.png";
-import galleryImage34 from "../../public/gallery-images/png/gallery-00034.png";
-import galleryImage35 from "../../public/gallery-images/png/gallery-00035.png";
-import galleryImage36 from "../../public/gallery-images/png/gallery-00036.png";
-import galleryImage37 from "../../public/gallery-images/png/gallery-00037.png";
-import galleryImage38 from "../../public/gallery-images/png/gallery-00038.png";
+import galleryImage00 from "../../public/gallery-images/webp/original/gallery-00000.webp";
+import galleryImage01 from "../../public/gallery-images/webp/original/gallery-00001.webp";
+import galleryImage02 from "../../public/gallery-images/webp/original/gallery-00002.webp";
+import galleryImage03 from "../../public/gallery-images/webp/original/gallery-00003.webp";
+import galleryImage04 from "../../public/gallery-images/webp/original/gallery-00004.webp";
+import galleryImage05 from "../../public/gallery-images/webp/original/gallery-00005.webp";
+import galleryImage06 from "../../public/gallery-images/webp/original/gallery-00006.webp";
+import galleryImage07 from "../../public/gallery-images/webp/original/gallery-00007.webp";
+import galleryImage08 from "../../public/gallery-images/webp/original/gallery-00008.webp";
+import galleryImage09 from "../../public/gallery-images/webp/original/gallery-00009.webp";
+import galleryImage10 from "../../public/gallery-images/webp/original/gallery-00010.webp";
+import galleryImage11 from "../../public/gallery-images/webp/original/gallery-00011.webp";
+import galleryImage12 from "../../public/gallery-images/webp/original/gallery-00012.webp";
+import galleryImage13 from "../../public/gallery-images/webp/original/gallery-00013.webp";
+import galleryImage14 from "../../public/gallery-images/webp/original/gallery-00014.webp";
+import galleryImage15 from "../../public/gallery-images/webp/original/gallery-00015.webp";
+import galleryImage16 from "../../public/gallery-images/webp/original/gallery-00016.webp";
+import galleryImage17 from "../../public/gallery-images/webp/original/gallery-00017.webp";
+import galleryImage18 from "../../public/gallery-images/webp/original/gallery-00018.webp";
+import galleryImage19 from "../../public/gallery-images/webp/original/gallery-00019.webp";
+import galleryImage20 from "../../public/gallery-images/webp/original/gallery-00020.webp";
+import galleryImage21 from "../../public/gallery-images/webp/original/gallery-00021.webp";
+import galleryImage22 from "../../public/gallery-images/webp/original/gallery-00022.webp";
+import galleryImage23 from "../../public/gallery-images/webp/original/gallery-00023.webp";
+import galleryImage24 from "../../public/gallery-images/webp/original/gallery-00024.webp";
+import galleryImage25 from "../../public/gallery-images/webp/original/gallery-00025.webp";
+import galleryImage26 from "../../public/gallery-images/webp/original/gallery-00026.webp";
+import galleryImage27 from "../../public/gallery-images/webp/original/gallery-00027.webp";
+import galleryImage28 from "../../public/gallery-images/webp/original/gallery-00028.webp";
+import galleryImage29 from "../../public/gallery-images/webp/original/gallery-00029.webp";
+import galleryImage30 from "../../public/gallery-images/webp/original/gallery-00030.webp";
+import galleryImage31 from "../../public/gallery-images/webp/original/gallery-00031.webp";
+import galleryImage32 from "../../public/gallery-images/webp/original/gallery-00032.webp";
+import galleryImage33 from "../../public/gallery-images/webp/original/gallery-00033.webp";
+import galleryImage34 from "../../public/gallery-images/webp/original/gallery-00034.webp";
+import galleryImage35 from "../../public/gallery-images/webp/original/gallery-00035.webp";
+import galleryImage36 from "../../public/gallery-images/webp/original/gallery-00036.webp";
+import galleryImage37 from "../../public/gallery-images/webp/original/gallery-00037.webp";
+import galleryImage38 from "../../public/gallery-images/webp/original/gallery-00038.webp";
 
 import galleryImageThumb00 from "../../public/gallery-images/thumb/gallery-00000-thumb.jpeg";
 import galleryImageThumb01 from "../../public/gallery-images/thumb/gallery-00001-thumb.jpeg";
@@ -234,6 +234,10 @@ const images = [
   {
     original:       galleryImage37.src,
     thumbnail: galleryImageThumb37.src,
+  },
+  {
+    original:       galleryImage38.src,
+    thumbnail: galleryImageThumb38.src,
   },
 ];
 

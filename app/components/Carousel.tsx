@@ -35,14 +35,14 @@ export default function Carousel({ carouselImages }: { carouselImages: StaticIma
       </div>
 
       <div className="absolute w-10/12 sm:w-4/5 lg:w-3/5 xl:w-1/2 px-5 flex items-center justify-between">
-        <button className="embla__prev left-0 top-0" onClick={scrollPrev} name="Slide Carousel Left">
+				<button className="embla__prev left-0 top-0" onClick={scrollPrev} aria-label="Slide Carousel Left">
           <Image
             src={arrowImg}
             alt=""
             className="w-5 sm:w-8"
           />
         </button>
-        <button className="embla__next rotate-180" onClick={scrollNext} name="Slide Carousel Right">
+        <button className="embla__next rotate-180" onClick={scrollNext} aria-label="Slide Carousel Right">
           <Image
             src={arrowImg}
             alt=""

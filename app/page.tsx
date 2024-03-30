@@ -9,7 +9,6 @@ import Navbar from "./components/Navbar";
 import CallNowButton from "./components/CallNowButton";
 import QuoteForm from "./components/QuoteForm";
 import TestimonialCarousel from "./components/TestimonialCarousel";
-import AreaMap from "./components/AreaMap";
 
 import carouselImage1 from "../public/carousel-images/homepage/carousel-00001.png";
 import carouselImage2 from "../public/carousel-images/homepage/carousel-00002.png";
@@ -31,7 +30,7 @@ import carouselImage17 from "../public/carousel-images/homepage/carousel-00017.p
 import carouselImage18 from "../public/carousel-images/homepage/carousel-00018.png";
 
 import irrigationBg from "../public/irrigation-bg.png";
-import blurredHero from "../public/blurred-hero-small.png";
+import blurredHero from "../public/blurred-hero-small.webp";
 import Certifications from "./components/Certifications";
 import PopupOverlay from "./components/PopupOverlay";
 
@@ -41,6 +40,10 @@ import paverPatiosTileImage from "../public/service-header-images/paver-patios.p
 import retainingWallsTileImage from "../public/service-header-images/retaining-walls.png";
 import threeDDesignsTileImage from "../public/service-header-images/3d-designs-small.png";
 import dynamic from "next/dynamic";
+
+const LazyLoadedAreaMap = dynamic(() => import('./components/AreaMap'), {
+  ssr: false,
+});
 
 const LazyLoadedGallery = dynamic(() => import('./components/Gallery'), {
   ssr: false,
@@ -157,7 +160,7 @@ export default function Home() {
         <h2 className="font-medium text-3xl">Areas We Service</h2>
 
         <div className="w-full h-60 sm:h-[30rem] my-5">
-          <AreaMap />
+          <LazyLoadedAreaMap />
         </div>
 
         <p className="w-3/4 sm:w-1/2 lg:text-lg">

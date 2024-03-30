@@ -3,7 +3,7 @@ import Image from "next/image";
 import FullHeightContainer from "../components/FullHeightContainer";
 import Navbar from "../components/Navbar";
 
-import blurredHero from "../../public/blurred-hero.png";
+import blurredHero from "../../public/blurred-hero-small.webp";
 import newInstallationsImage from "../../public/service-header-images/new-installation.png";
 import irrigationServicesImage from "../../public/service-header-images/irrigation-service.png";
 import addlServicesImage from "../../public/irrigation-bg.png";
