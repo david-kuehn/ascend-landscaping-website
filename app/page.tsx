@@ -31,7 +31,7 @@ import carouselImage17 from "../public/carousel-images/homepage/carousel-00017.p
 import carouselImage18 from "../public/carousel-images/homepage/carousel-00018.png";
 
 import irrigationBg from "../public/irrigation-bg.png";
-import blurredHero from "../public/blurred-hero.png";
+import blurredHero from "../public/blurred-hero-small.png";
 import Certifications from "./components/Certifications";
 import PopupOverlay from "./components/PopupOverlay";
 
@@ -39,7 +39,12 @@ import newIrrigationSystemTileImage from "../public/service-header-images/new-in
 import irrigationServicesTileImage from "../public/service-header-images/irrigation-service.png";
 import paverPatiosTileImage from "../public/service-header-images/paver-patios.png";
 import retainingWallsTileImage from "../public/service-header-images/retaining-walls.png";
-import threeDDesignsTileImage from "../public/service-header-images/3d-designs.png";
+import threeDDesignsTileImage from "../public/service-header-images/3d-designs-small.png";
+import dynamic from "next/dynamic";
+
+const LazyLoadedGallery = dynamic(() => import('./components/Gallery'), {
+  ssr: false,
+});
 
 const homePageCarouselImages: StaticImageData[] = [carouselImage1, carouselImage2, carouselImage3, carouselImage4, carouselImage5, carouselImage6, carouselImage7, carouselImage8, 
   carouselImage9, carouselImage10, carouselImage11, carouselImage12, carouselImage13, carouselImage14, carouselImage15, carouselImage16, carouselImage17, carouselImage18]
@@ -201,6 +206,12 @@ export default function Home() {
       <div className="pt-6 w-full flex flex-col items-center justify-center">
         <QuoteForm />
       </div>
+
+			{ /* Gallery */ }
+      <div className="pt-10 w-full flex flex-col items-center justify-center">
+        <h2 className="font-medium text-3xl mb-6 text-black">Gallery</h2>
+				<LazyLoadedGallery />
+			</div>
     </main>
   )
 }
