@@ -13,6 +13,7 @@ import igIcon from "../public/ig-icon.png";
 
 import { Analytics } from "@vercel/analytics/react";
 import { GoogleTagManager } from '@next/third-parties/google';
+import Head from 'next/head';
 
 const yrsa = Yrsa({
   subsets: ['latin'],
@@ -44,6 +45,20 @@ export default function RootLayout({
   return (
     <html lang="en">
 			<GoogleTagManager gtmId="AW-16510033084" />
+			<Head>
+				<title>Ascend Irriscape | Irrigation and Hardscaping Services in Chicagoland</title>
+				<meta
+					name="description"
+					content="Make your exterior dreams come true with Ascend Irriscape! Proudly serving Chicagoland with quality irrigation and hardscaping services at a fair price. Contact us today!"
+					key="desc"
+				/>
+
+				<meta property="og:title" content="Ascend Irriscape | Irrigation and Hardscaping Services in Chicagoland" />
+        <meta
+          property="og:description"
+          content="Make your exterior dreams come true with Ascend Irriscape! Proudly serving Chicagoland with quality irrigation and hardscaping services at a fair price. Contact us today!"
+        />
+			</Head>
 			<head>
 				<meta name="theme-color" content="#ffffff" />
 			</head>
