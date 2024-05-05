@@ -29,8 +29,8 @@ export default function PopupOverlay() {
 				className="h-24"
 				style={{objectFit: "contain"}}
 			/>
-			<h1 className="font-bold text-4xl text-ascendblue w-full px-2">SPRING STARTUP</h1>
-			<p className="mx-6">Get ahead of the game and schedule a Spring Startup / Activation for your irrigation system today!</p>
+			<h1 className="font-bold text-4xl text-ascendblue w-full px-2">SPRINKLER SYSTEM STARTUP</h1>
+			<p className="mx-6">Get ahead of the game and schedule a Sprinkler System Startup / Activation for your irrigation system today!</p>
 			<div className="bg-ascendblue rounded-lg px-3 py-2 drop-shadow-xl font-medium">PROCEED TO SITE</div>
 			<div className="bg-ascendblue rounded-lg px-3 py-2 drop-shadow-xl font-medium" onClick={scrollToForm}>FILL OUT FORM</div>
 		</div>
