@@ -39,6 +39,29 @@ import galleryImage35 from "../../public/gallery-images/webp/original/gallery-00
 import galleryImage36 from "../../public/gallery-images/webp/original/gallery-00036.webp";
 import galleryImage37 from "../../public/gallery-images/webp/original/gallery-00037.webp";
 import galleryImage38 from "../../public/gallery-images/webp/original/gallery-00038.webp";
+import galleryImage39 from "../../public/gallery-images/webp/original/gallery-00039.webp";
+import galleryImage40 from "../../public/gallery-images/webp/original/gallery-00040.webp";
+import galleryImage41 from "../../public/gallery-images/webp/original/gallery-00041.webp";
+import galleryImage42 from "../../public/gallery-images/webp/original/gallery-00042.webp";
+import galleryImage43 from "../../public/gallery-images/webp/original/gallery-00043.webp";
+import galleryImage44 from "../../public/gallery-images/webp/original/gallery-00044.webp";
+import galleryImage45 from "../../public/gallery-images/webp/original/gallery-00045.webp";
+import galleryImage46 from "../../public/gallery-images/webp/original/gallery-00046.webp";
+import galleryImage47 from "../../public/gallery-images/webp/original/gallery-00047.webp";
+import galleryImage48 from "../../public/gallery-images/webp/original/gallery-00048.webp";
+import galleryImage49 from "../../public/gallery-images/webp/original/gallery-00049.webp";
+import galleryImage50 from "../../public/gallery-images/webp/original/gallery-00050.webp";
+import galleryImage51 from "../../public/gallery-images/webp/original/gallery-00051.webp";
+import galleryImage52 from "../../public/gallery-images/webp/original/gallery-00052.webp";
+import galleryImage53 from "../../public/gallery-images/webp/original/gallery-00053.webp";
+import galleryImage54 from "../../public/gallery-images/webp/original/gallery-00054.webp";
+import galleryImage55 from "../../public/gallery-images/webp/original/gallery-00055.webp";
+import galleryImage56 from "../../public/gallery-images/webp/original/gallery-00056.webp";
+import galleryImage57 from "../../public/gallery-images/webp/original/gallery-00057.webp";
+import galleryImage58 from "../../public/gallery-images/webp/original/gallery-00058.webp";
+import galleryImage59 from "../../public/gallery-images/webp/original/gallery-00059.webp";
+import galleryImage60 from "../../public/gallery-images/webp/original/gallery-00060.webp";
+import galleryImage61 from "../../public/gallery-images/webp/original/gallery-00061.webp";
 
 import galleryImageThumb00 from "../../public/gallery-images/thumb/gallery-00000-thumb.jpeg";
 import galleryImageThumb01 from "../../public/gallery-images/thumb/gallery-00001-thumb.jpeg";
@@ -79,6 +102,29 @@ import galleryImageThumb35 from "../../public/gallery-images/thumb/gallery-00035
 import galleryImageThumb36 from "../../public/gallery-images/thumb/gallery-00036-thumb.jpeg";
 import galleryImageThumb37 from "../../public/gallery-images/thumb/gallery-00037-thumb.jpeg";
 import galleryImageThumb38 from "../../public/gallery-images/thumb/gallery-00038-thumb.jpeg";
+import galleryImageThumb39 from "../../public/gallery-images/thumb/gallery-00039-thumb.jpeg";
+import galleryImageThumb40 from "../../public/gallery-images/thumb/gallery-00040-thumb.jpeg";
+import galleryImageThumb41 from "../../public/gallery-images/thumb/gallery-00041-thumb.jpeg";
+import galleryImageThumb42 from "../../public/gallery-images/thumb/gallery-00042-thumb.jpeg";
+import galleryImageThumb43 from "../../public/gallery-images/thumb/gallery-00043-thumb.jpeg";
+import galleryImageThumb44 from "../../public/gallery-images/thumb/gallery-00044-thumb.jpeg";
+import galleryImageThumb45 from "../../public/gallery-images/thumb/gallery-00045-thumb.jpeg";
+import galleryImageThumb46 from "../../public/gallery-images/thumb/gallery-00046-thumb.jpeg";
+import galleryImageThumb47 from "../../public/gallery-images/thumb/gallery-00047-thumb.jpeg";
+import galleryImageThumb48 from "../../public/gallery-images/thumb/gallery-00048-thumb.jpeg";
+import galleryImageThumb49 from "../../public/gallery-images/thumb/gallery-00049-thumb.jpeg";
+import galleryImageThumb50 from "../../public/gallery-images/thumb/gallery-00050-thumb.jpeg";
+import galleryImageThumb51 from "../../public/gallery-images/thumb/gallery-00051-thumb.jpeg";
+import galleryImageThumb52 from "../../public/gallery-images/thumb/gallery-00052-thumb.jpeg";
+import galleryImageThumb53 from "../../public/gallery-images/thumb/gallery-00053-thumb.jpeg";
+import galleryImageThumb54 from "../../public/gallery-images/thumb/gallery-00054-thumb.jpeg";
+import galleryImageThumb55 from "../../public/gallery-images/thumb/gallery-00055-thumb.jpeg";
+import galleryImageThumb56 from "../../public/gallery-images/thumb/gallery-00056-thumb.jpeg";
+import galleryImageThumb57 from "../../public/gallery-images/thumb/gallery-00057-thumb.jpeg";
+import galleryImageThumb58 from "../../public/gallery-images/thumb/gallery-00058-thumb.jpeg";
+import galleryImageThumb59 from "../../public/gallery-images/thumb/gallery-00059-thumb.jpeg";
+import galleryImageThumb60 from "../../public/gallery-images/thumb/gallery-00060-thumb.jpeg";
+import galleryImageThumb61 from "../../public/gallery-images/thumb/gallery-00061-thumb.jpeg";
 
 var fs = require('fs');
 
@@ -238,6 +284,98 @@ const images = [
   {
     original:       galleryImage38.src,
     thumbnail: galleryImageThumb38.src,
+  },
+  {
+    original:       galleryImage39.src,
+    thumbnail: galleryImageThumb48.src,
+  },
+  {
+    original:       galleryImage40.src,
+    thumbnail: galleryImageThumb40.src,
+  },
+  {
+    original:       galleryImage41.src,
+    thumbnail: galleryImageThumb41.src,
+  },
+  {
+    original:       galleryImage42.src,
+    thumbnail: galleryImageThumb42.src,
+  },
+  {
+    original:       galleryImage43.src,
+    thumbnail: galleryImageThumb43.src,
+  },
+  {
+    original:       galleryImage44.src,
+    thumbnail: galleryImageThumb44.src,
+  },
+  {
+    original:       galleryImage45.src,
+    thumbnail: galleryImageThumb45.src,
+  },
+  {
+    original:       galleryImage46.src,
+    thumbnail: galleryImageThumb46.src,
+  },
+  {
+    original:       galleryImage47.src,
+    thumbnail: galleryImageThumb47.src,
+  },
+  {
+    original:       galleryImage48.src,
+    thumbnail: galleryImageThumb48.src,
+  },
+  {
+    original:       galleryImage49.src,
+    thumbnail: galleryImageThumb49.src,
+  },
+  {
+    original:       galleryImage50.src,
+    thumbnail: galleryImageThumb50.src,
+  },
+  {
+    original:       galleryImage51.src,
+    thumbnail: galleryImageThumb51.src,
+  },
+  {
+    original:       galleryImage52.src,
+    thumbnail: galleryImageThumb52.src,
+  },
+  {
+    original:       galleryImage53.src,
+    thumbnail: galleryImageThumb53.src,
+  },
+  {
+    original:       galleryImage54.src,
+    thumbnail: galleryImageThumb54.src,
+  },
+  {
+    original:       galleryImage55.src,
+    thumbnail: galleryImageThumb55.src,
+  },
+  {
+    original:       galleryImage56.src,
+    thumbnail: galleryImageThumb56.src,
+  },
+  {
+    original:       galleryImage57.src,
+    thumbnail: galleryImageThumb57.src,
+  },
+  {
+    original:       galleryImage58.src,
+    thumbnail: galleryImageThumb58.src,
+  },
+  {
+    original:       galleryImage59.src,
+    thumbnail: galleryImageThumb59.src,
+  },
+  {
+    original:       galleryImage60.src,
+    thumbnail: galleryImageThumb60.src,
+  },
+  {
+    original:       galleryImage61.src,
+    thumbnail: galleryImageThumb61.src,
   },
 ];
 
