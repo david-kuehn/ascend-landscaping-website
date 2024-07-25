@@ -92,7 +92,7 @@ export default function RootLayout({
 								width={35}
 							/>
 						</a>
-						<a href="https://www.instagram.com/ascend_landscaping/" target="_blank">
+						<a href="https://www.instagram.com/ascend_irriscape/" target="_blank">
 							<Image
 								src={igIcon}
 								alt=""
