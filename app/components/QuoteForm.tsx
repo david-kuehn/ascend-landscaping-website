@@ -197,7 +197,7 @@ export default function QuoteForm() {
           <div className="mt-2 flex flex-col">
             <h3 className="font-semibold leading-none text-lg">Something else:</h3>
 
-            <textarea placeholder="What're you looking for?" className="w-full flex-1 mt-1 p-1 rounded-sm" value={otherService} onChange={(e) => setOtherService(e.target.value)} />
+            <textarea placeholder="Please give us a brief description of your project." className="w-full flex-1 mt-1 p-1 rounded-sm" value={otherService} onChange={(e) => setOtherService(e.target.value)} />
           </div>
         </div>
 

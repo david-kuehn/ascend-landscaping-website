@@ -7,6 +7,136 @@ import arrowImg from "../../public/arrow.svg";
 import { useCallback } from "react";
 
 const testimonials = [
+	{
+		name: "Bill Burn",
+		blurb: "Armando and his team were amazing. Ascend was able to help quickly provide a quote, communicate exactly what would be happening, and ensure that the entire process was smooth from quote to completion. Their attention to detail is fantastic. We will absolutely be using them again. 5/5",
+		googleLink: "https://g.co/kgs/uzdcj8y",
+	},
+	{
+		name: "Parth Nanavati",
+		blurb: "Armando and his team were fantastic. High quality work and great communication. They did our landscaping and our sprinkler system. Highly recommend him and his team to anyone and everyone. They were very efficient and made sure everything looked/worked perfectly.",
+		googleLink: "https://g.co/kgs/sanLD7u",
+	},
+	{
+    name: "Tracy Blasiak",
+    blurb: "We have been looking forward to working with Armando for over a year. He has been very patient and attentive in helping creating our vision. His realistic 3D imaging helped us visualize exactly what we wanted (even if it changed 5x). His customer service is truly 10/10. His crew was respectful and delivered the project on time and as expected.",
+    googleLink: "https://g.co/kgs/8VhyCki"
+	},
+	{
+		name: "Chris Hupke",
+		blurb: "Armando & the team were great to work with…extremely knowledgeable and efficient. All questions were answered and the new system was explained in detail. I would 100% recommend!",
+		googleLink: "https://g.co/kgs/sMJvWLy",
+	},
+	{
+		name: "David Pineda González",
+		blurb: "I recently hired Ascend in West Chicago for the installation of a sprinkler system in my garden, and I couldn't be more satisfied. From the first contact, Armando and his team demonstrated professionalism and deep knowledge of their product. The installation was quick and seamless, and the system works perfectly, keeping my lawn and plants in excellent condition. Additionally, they offered exceptional post-sale service, ensuring everything was in order and answering all my questions. I highly recommend Ascend for any sprinkler system needs!",
+		googleLink: "https://g.co/kgs/PzEYFjS",
+	},
+	{
+		name: "Brian Selvaggio",
+		blurb: "Great service and fixed my irrigation issues right away. Had a power outage that reset my sprinkler times and they came out and fixed it at no charge because they had previously worked on an issue.",
+		googleLink: "https://g.co/kgs/kv6X3ac",
+	},
+	{
+		name: "Tim Downey",
+		blurb: "Armando and his team responded immediately on two separate occasions to my request and repaired our irrigation system on the days I called. He and his team are personable, efficient and provide quality work at competitive pricing.",
+		googleLink: "https://g.co/kgs/yJjC2Ww",
+	},
+	{
+		name: "Brian Stephans",
+		blurb: "Armando was just here to replace my backflow. He has been awesome to work with! I first met him while trying to repair my Febco 825ya (I'm a DIYer). He was very responsive helping me find repair parts, etc. I couldn't get the old Febco to quit leaking. Armando consulted with me and just finished installing a new Wilkins 375. Such a great experience and I highly recommend this business. A pleasure to work with and respectful/thoughtful throughout. Thanks again!",
+		googleLink: "https://g.co/kgs/y24VRB4",
+	},
+	{
+		name: "Jasmine Khilnani",
+		blurb: "We couldn't be more pleased with the work Armando and his team did for our sprinkler system and lighting! From start to finish, their professionalism and attention to detail were exceptional. They completed the project efficiently and ensured everything was perfect. Our lawn has never looked better, and the lights add a stunning touch. Highly recommend Ascend Irrigation for their outstanding service!",
+		googleLink: "https://g.co/kgs/Nd5e59j",
+	},
+	{
+		name: "Kunal Patel",
+		blurb: "Armando and David from Ascend Irriscape did an outstanding job in fixing our existing irrigation system. They were professional, attentive, and delivered high-quality work on time. Highly recommend them for any landscaping needs!",
+		googleLink: "https://g.co/kgs/AgNkGct",
+	},
+	{
+		name: "James Hensley",
+		blurb: "We called Ascend to come out and take a look at our 30 year old sprinkler system, that hadn't been used in 10 years. They were super clear and transparent with every piece of the system that needed repair, offering options and suggestions along the way. In the end, they spent all day fixing and improving the system, which includes a new wifi Controller we can run from our phones. Very pleased with the entire team, their professionalism, and the work.",
+		googleLink: "https://g.co/kgs/4oFu2Ly",
+	},
+	{
+		name: "Libby & Tommy Roy",
+		blurb: "If you have an irrigation system at your home, we highly recommend Armando and his team at Ascend! They deliver high quality work and provide great communication and flexibility to take care of our sprinkler system.",
+		googleLink: "https://g.co/kgs/WnKfpAs",
+	},
+	{
+		name: "Angela Swanson",
+		blurb: "Armando and his team were amazing! We had them create brick paver areas for our garbage cans to sit on. Not your basic slab.. they actually look so pretty and appealing! Armando got me on his schedule much faster than I was expecting and we are so happy with the end result. They are perfectionists and made sure that our paver areas were flawless! And to add, Armando was just a pleasure speaking with every time! Great energy and great customer service! 10/10!!",
+		googleLink: "https://g.co/kgs/PABYVT9",
+	},
+	{
+		name: "Casey Bouton",
+		blurb: "Seriously the sweetest, kindest gentleman ever! Super responsive. So helpful. Great to work with. He installed our fountain, and it’s amazing. Highly recommend anytime.",
+		googleLink: "https://g.co/kgs/EyaYhg9",
+	},
+	{
+		name: "Anam A",
+		blurb: "Armando and his crew were very professional in fixing my parents existing underground sprinkler system. Once they were complete, Armando took the time to show us how to use the sprinkler app and answered any questions that we may have. He was professional and courteous, I would highly recommend him if you're looking for any irrigation work to be done!",
+		googleLink: "https://g.co/kgs/hESEFfm",
+	},
+	{
+		name: "Meenu Raja",
+		blurb: "Excellent experience and highly recommend. Armando is knowledgeable, thorough, professional and fairly priced. We will continue to use Ascend for our sprinkler maintenance from now on.",
+		googleLink: "https://g.co/kgs/jZVg1QW",
+	},
+	{
+		name: "David Whiteman",
+		blurb: "Armando did an excellent job from start to finish. Showed up on time. Quickly diagnosed the problem and told me the steps needed to fix my in-ground sprinkler system. Again showed up on time to do the work at the price quoted. Armando is very professional, knowledgeable and courteous. I would use him again and would highly recommend him to all.",
+		googleLink: "https://g.co/kgs/cAXVyo2",
+	},
+	{
+		name: "Tom Kost",
+		blurb: "Armando did a great job turning on my irrigation system! He was reasonably priced, was prompt on his arrival and kept great communication with me! I’d recommend his company to anyone needing their irrigation system turned on in the Spring.",
+		googleLink: "https://g.co/kgs/pZd96DE",
+	},
+	{
+		name: "Jorge Menchaca",
+		blurb: "I highly recommend Ascend Irrigation and hardscape. Armando and his crew did an outstanding job installing our pavers and landscaping.",
+		googleLink: "https://g.co/kgs/v2xY9hM",
+	},
+	{
+		name: "Julie Fiedler",
+		blurb: "Ascend is awesome. Armando and his team are extremely hard workers. They really care and want the customer to be happy. Very hard to find a company that has that type of work ethic. The stone work they did turned out amazing. So happy with it! Trenched and then mulched all the areas in my yard and it looks great. This is the second time I have hired them. Last year they fixed 2 gutter drainage major issues I had. No more problems thanks to Ascend Irrigation and Hardscape. Definitely will hire them again.",
+		googleLink: "https://g.co/kgs/nnvxCvF",
+	},
+	{
+		name: "Russ Fouts",
+		blurb: "Armando is the best. He does what he says he will do and does it when he says he will do it! Plus he’s a really nice guy and great to deal with. I would highly recommend Ascend for all your landscaping needs!",
+		googleLink: "https://g.co/kgs/sAhb4bP",
+	},
+	{
+		name: "Deecee Chung",
+		blurb: "Armando and his team did an absolutely amazing job for our company's landscaping. Couldn’t recommend a better company for our landscaping needs!",
+		googleLink: "https://g.co/kgs/TgXKbX5",
+	},
+	{
+		name: "Mark Schmit",
+		blurb: "Armando and his team are awesome. I highly recommend Ascend. Armando will make sure you’re happy with their work as the job progresses. And they do things the right way. No shortcuts. He also had a few suggestions and creative input that made the retaining wall fit with existing landscaping. So happy with their work, that he will be back for other projects.",
+		googleLink: "https://g.co/kgs/ktih4B2",
+	},
+	{
+		name: "Huriel Valdez",
+		blurb: "I recently had my sprinkler system activated and checked to make sure it’s functioning the way it’s supposed to. Armando did a fantastic job ensuring that everything was working efficiently. He even replaced 5 leaking and broken sprinkler heads, which not only saved me money on my water bill, but also prevented my lawn from getting swamped! I would highly recommend Ascend!",
+		googleLink: "https://g.co/kgs/nzocpZZ",
+	},
+	{
+		name: "Giovanni Cuenca-Ramos",
+		blurb: "Armando did a fantastic job at my house! He provided awesome customer service along with the required maintenance my sprinkler system needed! We plan on using his professional services later on in the future.",
+		googleLink: "https://g.co/kgs/S7fmHjC",
+	},
+	{
+		name: "Brandon Magana",
+		blurb: "I recently hired Ascend to service my irrigation system and repair several leaks and broken sprinkler heads I had. I must say, their team was absolutely awesome! They were professional, efficient, and did an excellent job. I am very satisfied with the work they did and would highly recommend them to anyone in need of irrigation services. Thank you Armando, for your outstanding service!",
+		googleLink: "https://g.co/kgs/LeZwq7k",
+	},
   {
     name: "Paula Perconti",
     blurb: "Ascend Landscaping did landscaping beds that made our home look amazing! Outstanding professionals that placed layers of crushed gravel and bricks to trim our beds and give our home a new look. This hard-working team were on-time, professional and knowledgeable. I highly recommend their services to anyone looking for a beautiful outdoor living space.Ascend does great landscaping work at a fair price! They were attentive to every detail of the project. 10/10!",
