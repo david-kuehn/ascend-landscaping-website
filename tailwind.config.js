@@ -27,6 +27,9 @@ module.exports = {
 				ascendblue: "#45D1FF",
 			}
     },
+		fontFamily: {
+			branded: ['var(--font-outfit)'],
+		}
   },
   plugins: [],
 }

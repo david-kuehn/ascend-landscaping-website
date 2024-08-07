@@ -4,6 +4,7 @@ import type { Metadata } from 'next';
 import dynamic from "next/dynamic";
 import { Yrsa } from 'next/font/google';
 import { Urbanist } from 'next/font/google';
+import { Outfit } from 'next/font/google';
 
 import phoneIcon from "../public/phone_icon.png";
 import emailIcon from "../public/email-icon.png";
@@ -25,6 +26,12 @@ const urbanist = Urbanist({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-urbanist',
+});
+
+const outfit = Outfit({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-outfit',
 });
 
 const ClientRenderedCalendly = dynamic(
@@ -69,7 +76,7 @@ export default function RootLayout({
         sizes="48x48"
       />
 
-      <body className={urbanist.variable} id="root-body">
+      <body className={outfit.variable + " " + urbanist.variable} id="root-body">
 				{children}
 				<Analytics />
 			</body>

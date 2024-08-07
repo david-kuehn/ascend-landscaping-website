@@ -88,7 +88,7 @@ export default function Home() {
 							}} />
 						<div className="relative flex-1 flex flex-col items-center justify-end gap-5 pb-16">
 							<h3 className="font-semibold text-2xl mx-3 text-white text-center">Call <a href="tel:630-639-8089">(630) 639-8089</a></h3>
-							<h1 className="font-bold text-4xl mx-3 text-white text-center">Ascend with our irrigation and hardscape solutions!</h1>
+							<h1 className="font-semibold font-branded text-4xl mx-3 text-white text-center">Ascend with our irrigation and hardscape solutions!</h1>
 							<div className="grid grid-cols-2 text-center gap-3 mt-5 font-semibold text-lg">
 								<a href="#quote-form"><div className="bg-ascendblue rounded-lg px-3 py-3 drop-shadow-xl">CONTACT FORM</div></a>
 								<a href="tel:630-639-8089"><div className="bg-ascendblue rounded-lg px-3 py-3 drop-shadow-xl">CALL NOW</div></a>
